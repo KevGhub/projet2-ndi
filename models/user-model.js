@@ -9,7 +9,7 @@ const userSchema = new Schema(
     lastName: { type: String, required: true, minlength: 2 },
     email: { type: String, required: true, unique: true, match: /^.+@.+\..+$/ }, // unique : ONE user for one email
     profileImg: { type: String, default: URL }, // ? URL ?
-    age: { type: number, required: true, min: 16 },
+    age: { type: Number, required: true, min: 16 },
     anonymousOption: [
       {
         pseudo: { type: String, required: true },

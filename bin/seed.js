@@ -9,7 +9,9 @@ const incivilitiesData = require("./incivilities.json");
 const Request = require("../models/request-model.js");
 
 const User = require("../models/user-model.js");
+
 const Category = require("../models/category-model.js");
+const categoriesData = require("./categories.json");
 
 // get the Incivilities-data from json file
 
@@ -33,4 +35,15 @@ Incivility.insertMany(incivilitiesData)
     console.log("Insert FAILURE", err);
   });
 
-module.exports = Incivility;
+// ---- insert Incivilities ----
+Category.insertMany(categoriesData)
+  .then(categoryResults => {
+    console.log(`Inserted ${categoryResults.length} Category 📘 👍`);
+  })
+  .catch(err => {
+    console.log("Insert FAILURE", err);
+  });
+
+
+
+

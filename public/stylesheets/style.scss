@@ -1,8 +1,76 @@
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+h1 {
+  color: rgb(137, 132, 228)
+}
+
+h2 {
+  color: rgb(132, 228, 132)
+}
+
+h3 {
+  color: pink;
+}
+
 a {
   color: #00B7FF;
 }
+
+label {
+  display: block;
+  margin: 20px 5px;
+}
+
+button {
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+ul {
+  list-style: none;
+}
+
+.logError-message {
+  display: block;
+  border: 3px solid orange;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 20px 10px;
+}
+
+.logSuccess-message {
+  display: block;
+  border: 3px solid rgb(87, 39, 219);
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 20px 10px;
+}
+
+.emailError-message {
+  display: block;
+  border: 3px solid rgb(221, 73, 10);
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 20px 10px;
+}
+
+.passwordError-message, .admin-error-message {
+  display: block;
+  border: 3px solid rgb(176, 204, 20);
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 20px 10px;
+}
+
+.logOutSuccess-message, .add-room-success-message {
+  display: block;
+  border: 3px solid rgb(20, 161, 204);
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 20px 10px;
+}
+

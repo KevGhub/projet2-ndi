@@ -8,14 +8,12 @@ const userSchema = new Schema(
     firstName: { type: String, required: true, minlength: 2 },
     lastName: { type: String, required: true, minlength: 2 },
     email: { type: String, required: true, unique: true, match: /^.+@.+\..+$/ }, // unique : ONE user for one email
-    profileImg: { type: String, default: URL }, // ? URL ?
+    profileImg: {
+      type: String,
+      default: "https://media.giphy.com/media/xThtaxbIPLT9XqWcDK/giphy.gif"
+    }, // ? URL ?
     age: { type: Number, required: true, min: 16 },
-    anonymousOption: [
-      {
-        pseudo: { type: String, required: true },
-        anonymousImg: { type: String, default: URL }
-      }
-    ],
+    pseudo: { type: String, required: true },
     encryptedPassword: { type: String, required: true },
 
     vote: [

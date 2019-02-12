@@ -13,11 +13,22 @@
     <h1>{{title}}</h1>
   
     <nav>
-      <a href="/">Home</a>
+      <a href="/">Accueil</a>
       <br>
-      <a href="/incivility-category">Douces incivilités</a>
+      <a href="/incivilites-categorie">Douces incivilités</a>
       <br>
-      <a href="/request-category">Douces requêtes</a>
+      <a href="/requete-categorie">Douces requêtes</a>
+      <br>
+      {{#if loggedUser}}
+      <b>{{loggedUser.pseudo}}</b>
+      <br>
+      <a href="/mon-compte/:userId">Mon compte</a>
+      <br>
+      <a href="/deconnexion">Déconnextion</a>
+      
+      {{else}}
+      <a href="/identification">Doux compte</a>
+      {{/if}}
     </nav>
   </header>
 

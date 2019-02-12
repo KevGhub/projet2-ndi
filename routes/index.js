@@ -5,13 +5,14 @@ const Category = require('../models/category-model.js')
 
 // HOMEPAGE ROUTER --------------------------------------------------------------
 //####################################################################
+
   //GET TO HOMEPAGE ****************************************
 router.get("/", (req, res, next) => {
   res.render("index");
 });
 
   //HOMEPAGE TO INCIVILITIES CATEGORY ****************************************
-router.get("/incivility-category", (req, res, next) => {
+router.get("/incivilites-categorie", (req, res, next) => {
   Category.find()
 
     .then(categoryResults => {
@@ -19,12 +20,11 @@ router.get("/incivility-category", (req, res, next) => {
       res.render("incivilities-views/inc-categories.hbs");
     })
 
-    // next(err) skips to the error handler in "bin/wwww" (error.hbs)
     .catch(err => next(err));
 });
 
-//HOMEPAGE TO INCIVILITIES CATEGORY ****************************************
-router.get("/request-category", (req, res, next) => {
+  //HOMEPAGE TO REQUESTS CATEGORY ****************************************
+router.get("/requete-categorie", (req, res, next) => {
   Category.find()
 
     .then(categoryResults => {
@@ -32,7 +32,6 @@ router.get("/request-category", (req, res, next) => {
       res.render("requests-views/req-categories.hbs");
     })
 
-    // next(err) skips to the error handler in "bin/wwww" (error.hbs)
     .catch(err => next(err));
 });
 

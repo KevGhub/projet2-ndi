@@ -3,15 +3,28 @@
 <hr>
 
 <div class="user-info">
-
-<p>Bienvenue <b>{{userDoc.pseudo}}</b> !</p>
-
-<div><img src="{{userDoc.profileImg}}" alt=""></div>
-
-<br>
-
-<b>{{userDoc.firstName}}</b> , <b>{{userDoc.lastName}}</b>
+  <p>Bienvenue <b>{{userDoc.pseudo}}</b> !</p>
+  <div><img src="{{userDoc.profileImg}}" alt=""></div>
+  <br>
+  <b>{{userDoc.firstName}}</b> , <b>{{userDoc.lastName}}</b>
 </div>
 
-<a href="/nouvelle-requete">Créer une requête</a>
-<a href="/mes-requetes">Mes requêtes</a>
+<div class="user-req">
+  <h4>Mes requêtes</h4>
+  <ul>
+    {{#each reqUser}}
+    <li>
+      <h3>{{this.title}}</h3>
+      <br>
+      <p>{{this.goal}}</p>
+      <br>
+      <img src="{{this.img}}" alt="Requête photo">
+      <br>
+      <a href="/requete-detail/{{this._id}}">Voir la requête</a>
+    </li>
+    {{/each}}
+  </ul>
+  
+  <a href="/nouvelle-requete">Créer une requête</a>
+</div>
+

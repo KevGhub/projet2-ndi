@@ -28,7 +28,7 @@ router.get("/requete-categorie", (req, res, next) => {
   Category.find()
 
     .then(categoryResults => {
-      res.locals.category1Array = categoryResults;
+      res.locals.categoryResults = categoryResults;
       res.render("requests-views/req-categories.hbs");
     })
 

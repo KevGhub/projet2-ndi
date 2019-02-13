@@ -17,7 +17,6 @@ router.get("/nouvelle-requete", (req, res, next) => {
     res.render("requests-views/req-create");
   } else {
     req.flash("add-room-error", `You have to be looged in ! 🥣`);
-    //redirect to login page if userResult is NULL (no account with the email)
     res.redirect("/identification");
   }
 });
@@ -25,29 +24,31 @@ router.get("/nouvelle-requete", (req, res, next) => {
 
 // fileUploader.single('pictureUpload'),
 // PROCESSING VERIFICATION ****************************************
-router.post("/verif-create-req",  (req, res, next) => {
-  // const img = req.file.secure_url;
-  
-  //*********************************************************************
-  
+router.post("/verif-create-req", fileUploader.single("pictureUpload"), (req, res, next) => {
   // enforce login rules to access create a request ***************************
   if (!req.user) {
     req.flash("logError", `You have to be logged in ! 🥣`);
-    //redirect to login page if userResult is NULL (no account with the email)
     res.redirect("/identification");
   } else {
+
     const { title, description, place, goal } = req.body;
     const creator = req.user._id;
+    let img;
+    if (req.file) {
+      img = req.file.secure_url;
+    }
+
     //create a room ****************************************
-    Request.create({ title, description, place, goal, creator })
+    Request.create({ title, description, place, goal, creator, img })
       .then(requestDoc => {
         User.findByIdAndUpdate(req.user._id, {
           $push: { userRequest: requestDoc._id }
-        }).then(() => {
-          req.flash("add-room-success", `Request Created SUCCESS 🍔`);
-          res.redirect("/requete-detail/" + requestDoc._id);
         })
-        .catch(err => next(err))
+          .then(() => {
+            req.flash("add-room-success", `Request Created SUCCESS 🍔`);
+            res.redirect("/requete-detail/" + requestDoc._id);
+          })
+          .catch(err => next(err));
       })
       .catch(err => next(err));
   }
@@ -61,7 +62,7 @@ router.get("/requete-detail/:id", (req, res, next) => {
   Request.findById(req.params.id)
     .then(reqDoc => {
       res.locals.reqDoc = reqDoc;
-      res.render("requests-views/req-detail");
+      res.render("requests-views/req-detail" + reqDoc._id);
     })
     .catch(err => next(err));
   
@@ -79,22 +80,6 @@ router.get("/liste-requetes", (req, res, next) => {
     });
 });
   //*********************************************************************
-
-
-//GET TO USER REQUEST LISTING PAGE****************************************
-router.get("/mes-requetes", (req, res, next) => {
-  Request.find()
-    .sort({ createdAt: -1 })
-    .then(reqCategoriesResults => {
-      res.locals.reqCategoriesResults = reqCategoriesResults;
-      res.render("requests-views/req-listing");
-    });
-});
-  //*********************************************************************
-
-
-
-
 
 
 module.exports = router;

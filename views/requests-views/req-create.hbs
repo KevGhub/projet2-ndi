@@ -1,9 +1,8 @@
 <h2>Créer une requête</h2>
 
-{{!-- NEED enctype="multipart/form-data" for UPLOUADING FILES --}}
-{{!-- NEED to change the page from action="" --}}
+{{> auth_message}}
 
-<form action="/verif-create-req" method="post" >
+<form action="/verif-create-req" method="post" enctype="multipart/form-data">
   <label>
     <b>Titre de la requête</b> :
     <input type="text" name="title" placeholder="Quelques mots suffisent" required>
@@ -23,13 +22,11 @@
     <b>Description</b> (Décrivez avec le plus de détails possible):
     <textarea type="text" rows="5" cols="33" name="description" placeholder="Soyez convainquant" required></textarea>
   </label>
-{{!-- 
+
   <label>
-    <b>Ilistrer la requête</b> (jpeg, jpg, png ):
-    <input type="file" name="pictureUpload" required>
-  </label> --}}
-  {{!-- give a different name to the password to encrypt it first THEN save it in the database --}}
-  {{!-- type='file' = creat the input that open the pc folder window --}}
+    <b>Illustrer la requête</b> (jpeg, jpg, png ):
+    <input type="file" name="pictureUpload">
+  </label>
 
   <button>Créer votre requête</button>
 </form>

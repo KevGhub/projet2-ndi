@@ -108,4 +108,7 @@ app.use("/", auth);
 const account = require("./routes/user-account-router");
 app.use("/", account);
 
+const IncCategories = require("./routes/incivilities/inc-categories-router");
+app.use("/", IncCategories);
+
 module.exports = app;

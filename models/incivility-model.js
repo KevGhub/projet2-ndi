@@ -6,7 +6,12 @@ const Schema = mongoose.Schema;
 const incivilitySchema = new Schema(
   {
     name: { type: String, required: true },
-    category: ["protection", "environnement", "tranquilité", "dignité"],
+    urlName: { type: String },
+
+    category: ["protection", "environnement", "tranquilite", "dignite"],
+
+    urlCategory: { type: String },
+
     icon: { type: String, default: URL }, // ? URL ?
     description: { type: String, required: true },
     law: { type: String, required: true },

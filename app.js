@@ -15,7 +15,7 @@ const passport = require("passport");
 
 // RUN PASSPORT ----------------------------------------------------------------------------
 // run the code inide the file, no need a const cause won't use it in any other page
-require('./config/passport-setup');
+require("./config/passport-setup");
 
 mongoose
   .connect("mongodb://localhost/ndi-data", { useNewUrlParser: true })
@@ -57,17 +57,17 @@ app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
-
 //make our Express app create SESSION ------------------------------------------------
-app.use(session({
-  // MUST SAVEUNINITIALIZED AND RESAVE BE THERE OR ERROR
-  saveUninitialized: true,
-  resave: true,
-  // SECRET SHOULD BE A STRING TAH'S DIFFERENT FOR EVERY APP
-  //ALWAYS WRITE SECRET IN .ENV THATS IS IN GITIGNORE beceause secret can creat a new cookie
-  secret: 'hiohiehqdjidùsqhs$fiaa',
-  store: new MongoStore({ mongooseConnection: mongoose.connection })
-})
+app.use(
+  session({
+    // MUST SAVEUNINITIALIZED AND RESAVE BE THERE OR ERROR
+    saveUninitialized: true,
+    resave: true,
+    // SECRET SHOULD BE A STRING TAH'S DIFFERENT FOR EVERY APP
+    //ALWAYS WRITE SECRET IN .ENV THATS IS IN GITIGNORE beceause secret can creat a new cookie
+    secret: "hiohiehqdjidùsqhs$fiaa",
+    store: new MongoStore({ mongooseConnection: mongoose.connection })
+  })
 );
 
 //PASSPORT SESSION & LOGIN / LOGOUT ------------------------------------------------
@@ -76,7 +76,6 @@ app.use(session({
 app.use(passport.initialize());
 // make passport manage our user session and be able to use req.nameOfSchemaModel
 app.use(passport.session());
-
 
 //allow our routes to use FLASH MESSAGES --------------------------------------------------
 // (feedback messages before redirecting)
@@ -95,7 +94,7 @@ app.use((req, res, next) => {
   // tell Express we are ready to move to the routes now
   // (need this or your pages will stay laoding forever)
   next();
-})
+});
 
 // default value for title local
 app.locals.title = "Nos Douces Incivilités";
@@ -112,5 +111,7 @@ app.use("/", auth);
 const account = require("./routes/user-account-router");
 app.use("/", account);
 
+const IncCategories = require("./routes/incivilities/inc-categories-router");
+app.use("/", IncCategories);
 
 module.exports = app;

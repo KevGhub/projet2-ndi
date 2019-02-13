@@ -1,20 +1,28 @@
 [
   {
     "name": "Protection",
+    "urlName": "protection",
+
     "icon": "url"
   },
 
   {
     "name": "Tranquilité",
+    "urlName": "tranquilite",
+
     "icon": "url"
   },
 
   {
     "name": "Environnement",
+    "urlName": "environnement",
+
     "icon": "url"
   },
   {
     "name": "Dignité",
+    "urlName": "dignite",
+
     "icon": "url"
   }
 ]

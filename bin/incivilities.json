@@ -1,6 +1,7 @@
 [
   {
     "name": "Animaux",
+    "urlName": "animaux",
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
@@ -31,11 +32,14 @@
       }
     ],
 
-    "category": "protection"
+    "category": "protection",
+    "urlCategory": "protection"
   },
 
   {
-    "name": "Equipements publics",
+    "name": "Équipements publics",
+    "urlName": "equipements-publics",
+
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
@@ -66,11 +70,13 @@
       }
     ],
 
-    "category": "protection"
+    "category": "protection",
+    "urlCategory": "protection"
   },
 
   {
     "name": "Véhicules",
+    "urlName": "",
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
@@ -78,34 +84,36 @@
 
     "associations": [
       {
-        "name": "AttentionPiétons",
+        "name": "AttentionPietons",
         "img": "http//picture.fr ",
-        "url": "www.AttentionPiétons.fr"
+        "url": "www.AttentionPietons.fr"
       },
       {
-        "name": "AttentionPiétons",
+        "name": "AttentionPietons",
         "img": "http//picture.fr ",
-        "url": "www.AttentionPiétons.fr"
-      },
-
-      {
-        "name": "AttentionPiétons",
-        "img": "http//picture.fr ",
-        "url": "www.AttentionPiétons.fr"
+        "url": "www.AttentionPietons.fr"
       },
 
       {
-        "name": "AttentionPiétons",
+        "name": "AttentionPietons",
         "img": "http//picture.fr ",
-        "url": "www.AttentionPiétons.fr"
+        "url": "www.AttentionPietons.fr"
+      },
+
+      {
+        "name": "AttentionPietons",
+        "img": "http//picture.fr ",
+        "url": "www.AttentionPietons.fr"
       }
     ],
 
-    "category": "protection"
+    "category": "protection",
+    "urlCategory": "protection"
   },
 
   {
     "name": "Espaces publics",
+    "urlName": "espaces publics",
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
@@ -136,11 +144,13 @@
       }
     ],
 
-    "category": "protection"
+    "category": "protection",
+    "urlCategory": "protection"
   },
 
   {
     "name": "Propreté",
+    "urlName": "proprete",
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
@@ -170,11 +180,13 @@
       }
     ],
 
-    "category": "environnement"
+    "category": "environnement",
+    "urlCategory": "environnement"
   },
 
   {
     "name": "Dégradations",
+    "urlName": "degradation",
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
@@ -205,11 +217,13 @@
       }
     ],
 
-    "category": "environnement"
+    "category": "environnement",
+    "urlCategory": "environnement"
   },
 
   {
     "name": "Détritus",
+    "urlName": "detritus",
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
@@ -240,11 +254,13 @@
       }
     ],
 
-    "category": "environnement"
+    "category": "environnement",
+    "urlCategory": "environnement"
   },
 
   {
     "name": "Urbanisation solidaire",
+    "urlName": "urbanisation-solidaire",
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
@@ -275,11 +291,13 @@
       }
     ],
 
-    "category": "environnement"
+    "category": "environnement",
+    "urlCategory": "environnement"
   },
 
   {
     "name": "Politesse",
+    "urlName": "politesse",
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
@@ -310,11 +328,13 @@
       }
     ],
 
-    "category": "tranquilité"
+    "category": "tranquilité",
+    "urlCategory": "tranquilite"
   },
 
   {
     "name": "Transports en communs",
+    "urlName": "transport-en-communs",
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
@@ -322,34 +342,36 @@
 
     "associations": [
       {
-        "name": "SurMalignedeMétro",
+        "name": "SurMalignedeMetro",
         "img": "http//picture.fr ",
-        "url": "www.SurMalignedeMétro.fr"
+        "url": "www.SurMalignedeMetro.fr"
       },
       {
-        "name": "SurMalignedeMétro",
+        "name": "SurMalignedeMetro",
         "img": "http//picture.fr ",
-        "url": "www.SurMalignedeMétro.fr"
-      },
-
-      {
-        "name": "SurMalignedeMétro",
-        "img": "http//picture.fr ",
-        "url": "www.SurMalignedeMétro.fr"
+        "url": "www.SurMalignedeMetro.fr"
       },
 
       {
-        "name": "SurMalignedeMétro",
+        "name": "SurMalignedeMetro",
         "img": "http//picture.fr ",
-        "url": "www.SurMalignedeMétro.fr"
+        "url": "www.SurMalignedeMetro.fr"
+      },
+
+      {
+        "name": "SurMalignedeMetro",
+        "img": "http//picture.fr ",
+        "url": "www.SurMalignedeMetro.fr"
       }
     ],
 
-    "category": "tranquilité"
+    "category": "tranquilité",
+    "urlCategory": "tranquilite"
   },
 
   {
     "name": "Nuisances sonores",
+    "urlName": "nuisances-sonores",
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
@@ -381,11 +403,13 @@
       }
     ],
 
-    "category": "tranquilité"
+    "category": "tranquilité",
+    "urlCategory": "tranquilite"
   },
 
   {
     "name": "Temps libre",
+    "urlName": "temps-libre",
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
@@ -416,11 +440,13 @@
       }
     ],
 
-    "category": "tranquilité"
+    "category": "tranquilité",
+    "urlCategory": "tranquilite"
   },
 
   {
     "name": "Discriminations",
+    "urlName": "discriminations",
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
@@ -428,33 +454,35 @@
 
     "associations": [
       {
-        "name": "LeMélangeDesGenres",
+        "name": "LeMelangeDesGenres",
         "img": "http//picture.fr ",
-        "url": "www.LeMélangeDesGenres.fr"
+        "url": "www.LeMelangeDesGenres.fr"
       },
       {
-        "name": "LeMélangeDesGenres",
+        "name": "LeMelangeDesGenres",
         "img": "http//picture.fr ",
-        "url": "www.LeMélangeDesGenres.fr"
-      },
-
-      {
-        "name": "LeMélangeDesGenres",
-        "img": "http//picture.fr ",
-        "url": "www.LeMélangeDesGenres.fr"
+        "url": "www.LeMelangeDesGenres.fr"
       },
 
       {
-        "name": "LeMélangeDesGenres",
+        "name": "LeMelangeDesGenres",
         "img": "http//picture.fr ",
-        "url": "www.LeMélangeDesGenres.fr"
+        "url": "www.LeMelangeDesGenres.fr"
+      },
+
+      {
+        "name": "LeMelangeDesGenres",
+        "img": "http//picture.fr ",
+        "url": "www.LeMelangeDesGenres.fr"
       }
     ],
 
-    "category": "dignité"
+    "category": "dignité",
+    "urlCategory": "dignite"
   },
   {
-    "name": "Aide aux personnes en précarité",
+    "name": "Aide aux personnes en precarite",
+    "urlName": "",
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
@@ -485,10 +513,12 @@
       }
     ],
 
-    "category": "dignité"
+    "category": "dignité",
+    "urlCategory": "dignite"
   },
   {
     "name": "Aide aux mineurs",
+    "urlName": "aide-aux-mineurs",
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
@@ -519,11 +549,13 @@
       }
     ],
 
-    "category": "dignité"
+    "category": "dignité",
+    "urlCategory": "dignite"
   },
 
   {
     "name": "Aide aux personnes âgées",
+    "urlName": "aide-aux-personne-agees",
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
@@ -555,6 +587,7 @@
       }
     ],
 
-    "category": "dignité"
+    "category": "dignité",
+    "urlCategory": "dignite"
   }
 ]

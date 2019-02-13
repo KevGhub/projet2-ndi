@@ -1,12 +1,12 @@
-<h2> Douces Incivilités</h2>
-
+<h2> Douces Incivilités </h2>
 
 <ul>
   {{#each categoryArray}}
   <li>
-    <h3>{{this.name}}</h3>
-    <p>by {{this.icon}}</p>
-
+    <p> {{this.icon}}</p>
+    <a href="/incivilites-categories-{{this.urlName}}-liste">
+      <h3>{{this.name}}</h3>
+    </a>
   </li>
   {{/each}}
 </ul>

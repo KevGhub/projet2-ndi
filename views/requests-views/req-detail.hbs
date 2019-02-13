@@ -1,0 +1,15 @@
+<h2>Requête </h2>
+
+<ul>
+  {{#each reqDoc}}
+  <li>
+    <h3>{{this.title}}</h3>
+    <br>
+    <p>{{this.goal}}</p>
+    <br>
+    <p>{{this.description}}</p>
+    <br>
+    <img src="{{this.img}}" alt="Requête photo">
+  </li>
+  {{/each}}
+</ul>

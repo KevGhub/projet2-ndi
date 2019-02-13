@@ -7,26 +7,29 @@ const userSchema = new Schema(
   {
     firstName: { type: String, required: true, minlength: 2 },
     lastName: { type: String, required: true, minlength: 2 },
-    email: { type: String, required: true, unique: true, match: /^.+@.+\..+$/ }, // unique : ONE user for one email
+    email: { type: String, required: true, unique: true, match: /^.+@.+\..+$/ },
     profileImg: {
       type: String,
       default: "https://media.giphy.com/media/xThtaxbIPLT9XqWcDK/giphy.gif"
-    }, // ? URL ?
+    },
     age: { type: Number, required: true, min: 16 },
     pseudo: { type: String, required: true },
     encryptedPassword: { type: String, required: true },
-
+    userRequest: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Request"
+      }
+    ],
     vote: [
       {
-        type: String,
-        required: true,
+        type: Number,
         enum: ["normal", "admin"],
         default: "normal"
       }
     ]
   },
   {
-    // additionnal setting for the Schema class defined here
     timestamps: true
   }
 );

@@ -84,7 +84,7 @@ app.use(flash());
 app.use((req, res, next) => {
   // send flash message to the hbs files
   // (req.flash() comes from the 'connect-flash' npm package)
-  res.locals.message = req.flash();
+  res.locals.messages = req.flash();
 
   //send the logged in user's info to hbs files for ALL pages
   // (req.user is defined by Passport and contains the logged in user's info)
@@ -101,6 +101,9 @@ app.locals.title = "Nos Douces Incivilités";
 
 const index = require("./routes/index");
 app.use("/", index);
+
+const reqCategories = require("./routes/requests/req-categories-router");
+app.use("/", reqCategories);
 
 const auth = require("./routes/autho-router");
 app.use("/", auth);

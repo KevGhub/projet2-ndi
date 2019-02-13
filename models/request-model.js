@@ -5,12 +5,15 @@ const requestSchema = new Schema(
   {
     title: { type: String, required: true },
     description: { type: String, required: true, minlength: 100 },
-    place: { type: String }, // not required
-    goal: { type: Number, required: true },
-    img: { type: String, default: "URL" } // photo default ??
+    place: { type: String, required: true },
+    goal: { type: String, required: true },
+    img: {
+      type: String,
+      default: "https://media.giphy.com/media/3o7bukvWq54k2Q9H2w/giphy.gif"
+    },
+    creator: { type: Schema.Types.ObjectId, ref: "User" }
   },
   {
-    // additionnal setting for the Schema class defined here
     timestamps: true
   }
 );

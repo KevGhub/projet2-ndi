@@ -12,7 +12,8 @@ router.get('/identification', (req, res, next) => {
 
 // \\  PROCESSING SIGNUP VERIFICATION ****************************************
 router.post(
-  "/verif-signup",
+  "/verif-signup", 
+  fileUploader.single("pictureUpload"),
   (req, res, next) => {
     const {
       lastName,
@@ -21,7 +22,6 @@ router.post(
       originalPassword,
       age,
       pseudo,
-      profileImg
     } = req.body;
 
     // \\*********************************************************************
@@ -37,8 +37,16 @@ router.post(
     }
     // \\**********************************************************************************
 
+    // get part of the Cloudinary information (width, height, url...)
+    // const profileImg = req.file.secure_url;
     // \\ encrytp the user's password before saving ****************************************
     const encryptedPassword = bcrypt.hashSync(originalPassword, 10);
+
+    let profileImg;
+
+    if (req.file) {
+      profileImg = req.file.secure_url;
+    }
 
     User.create({
       lastName,
@@ -51,7 +59,7 @@ router.post(
     })
       .then(() => {
         req.flash("logSuccess", `Inscription SUCCESS 🦖`);
-        res.redirect("/");
+        res.redirect("/identification");
       })
       .catch(err => next(err));
   }
@@ -101,8 +109,10 @@ router.post('/verif-login', (req, res, next) => {
 //####################################################################
 router.get('/deconnexion', (req, res, next) => {
   req.logout();
-  req.flash('logOutSuccess', `Log OUT SUCCESS 🏆`);
-  res.redirect('/');
+  req.session.save(() => {
+    req.flash('logOutSuccess', `Log OUT SUCCESS 🏆`);
+    res.redirect('/');
+  });
 });
 // END LOGOUT ROUTER --------------------------------------------------------------
 //####################################################################

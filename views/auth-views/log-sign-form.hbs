@@ -4,7 +4,7 @@
 
    {{> auth_message}} 
 
-  <form action="/verif-signup" method="post">
+  <form action="/verif-signup" method="post" enctype="multipart/form-data">
     <label>
       <b>Nom</b> (obligatoire):
       <input type="text" name="lastName" placeholder="Votre nom" required>
@@ -30,12 +30,15 @@
       <input type="password" name="originalPassword" placeholder="Enter your password" required>
     </label>
 
-
     <label>
       <b>Votre âge</b> (obligatoire):
       <input type="number" name="age" placeholder="Votre âge" required>
     </label>
 
+    <label>
+      <b>Votre photo de profile</b> (jpeg, jpg, png ):
+      <input type="file" name="pictureUpload">
+    </label>
     <button>S'inscrire</button>
   </form>
 

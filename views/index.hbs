@@ -1,2 +1,13 @@
+<h2>Nos Douces Incivilités</h2>
 
-<p>Welcome to {{title}}</p>
+{{> auth_message}}
+
+{{#if loggedUser}}
+<h3>Bienvenue {{loggedUser.pseudo}} !</h3>
+
+{{else}}
+<p>Pas encore de compte ? Pourquoi ne pas vous inscrire :</p>
+
+<a href="/identification">S'inscrire</a>
+
+{{/if}}

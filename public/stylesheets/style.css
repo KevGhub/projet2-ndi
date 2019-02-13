@@ -2,7 +2,62 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
 
+h1 {
+  color: #8984e4; }
+
+h2 {
+  color: #84e484; }
+
+h3 {
+  color: pink; }
+
 a {
   color: #00B7FF; }
+
+label {
+  display: block;
+  margin: 20px 5px; }
+
+button {
+  padding: 10px 30px;
+  border-radius: 5px; }
+
+ul {
+  list-style: none; }
+
+.logError-message {
+  display: block;
+  border: 3px solid orange;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 20px 10px; }
+
+.logSuccess-message {
+  display: block;
+  border: 3px solid #5727db;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 20px 10px; }
+
+.emailError-message {
+  display: block;
+  border: 3px solid #dd490a;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 20px 10px; }
+
+.passwordError-message, .admin-error-message {
+  display: block;
+  border: 3px solid #b0cc14;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 20px 10px; }
+
+.logOutSuccess-message, .add-room-success-message {
+  display: block;
+  border: 3px solid #14a1cc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 20px 10px; }
 
 /*# sourceMappingURL=style.css.map */

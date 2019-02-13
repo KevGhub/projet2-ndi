@@ -10,29 +10,29 @@
     "associations": [
       {
         "name": "SPA",
-        "img": "http//picture.fr ",
+        "img": "https://media.giphy.com/media/PWFwdYy0da5sA/giphy.gif",
         "url": "www.spa.fr"
       },
 
       {
         "name": "SPA",
-        "img": "http//picture.fr ",
+        "img": "https://media.giphy.com/media/PWFwdYy0da5sA/giphy.gif",
         "url": "www.spa.fr"
       },
       {
         "name": "SPA",
-        "img": "http//picture.fr ",
+        "img": "https://media.giphy.com/media/PWFwdYy0da5sA/giphy.gif",
         "url": "www.spa.fr"
       },
 
       {
         "name": "SPA",
-        "img": "http//picture.fr ",
+        "img": "https://media.giphy.com/media/PWFwdYy0da5sA/giphy.gif",
         "url": "www.spa.fr"
       }
     ],
 
-    "category": "protection",
+    "category": "Protection",
     "urlCategory": "protection"
   },
 
@@ -48,35 +48,35 @@
     "associations": [
       {
         "name": "equipePublic",
-        "img": "http//picture.fr ",
+        "img": "https://media.giphy.com/media/PWFwdYy0da5sA/giphy.gif",
         "url": "www.equipePublic.fr"
       },
       {
         "name": "equipePublic",
-        "img": "http//picture.fr ",
-        "url": "www.equipePublic.fr"
-      },
-
-      {
-        "name": "equipePublic",
-        "img": "http//picture.fr ",
+        "img": "https://media.giphy.com/media/PWFwdYy0da5sA/giphy.gif",
         "url": "www.equipePublic.fr"
       },
 
       {
         "name": "equipePublic",
-        "img": "http//picture.fr ",
+        "img": "https://media.giphy.com/media/PWFwdYy0da5sA/giphy.gif",
+        "url": "www.equipePublic.fr"
+      },
+
+      {
+        "name": "equipePublic",
+        "img": "http://gph.is/1Kjtlft ",
         "url": "www.equipePublic.fr"
       }
     ],
 
-    "category": "protection",
+    "category": "Protection",
     "urlCategory": "protection"
   },
 
   {
     "name": "Véhicules",
-    "urlName": "",
+    "urlName": "vehicules",
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
@@ -107,7 +107,7 @@
       }
     ],
 
-    "category": "protection",
+    "category": "Protection",
     "urlCategory": "protection"
   },
 
@@ -144,7 +144,7 @@
       }
     ],
 
-    "category": "protection",
+    "category": "Protection",
     "urlCategory": "protection"
   },
 
@@ -180,7 +180,7 @@
       }
     ],
 
-    "category": "environnement",
+    "category": "Environnement",
     "urlCategory": "environnement"
   },
 
@@ -217,7 +217,7 @@
       }
     ],
 
-    "category": "environnement",
+    "category": "Environnement",
     "urlCategory": "environnement"
   },
 
@@ -254,7 +254,7 @@
       }
     ],
 
-    "category": "environnement",
+    "category": "Environnement",
     "urlCategory": "environnement"
   },
 
@@ -291,7 +291,7 @@
       }
     ],
 
-    "category": "environnement",
+    "category": "Environnement",
     "urlCategory": "environnement"
   },
 
@@ -328,7 +328,7 @@
       }
     ],
 
-    "category": "tranquilité",
+    "category": "Tranquilité",
     "urlCategory": "tranquilite"
   },
 
@@ -365,7 +365,7 @@
       }
     ],
 
-    "category": "tranquilité",
+    "category": "Tranquilité",
     "urlCategory": "tranquilite"
   },
 
@@ -403,7 +403,7 @@
       }
     ],
 
-    "category": "tranquilité",
+    "category": "Tranquilité",
     "urlCategory": "tranquilite"
   },
 
@@ -440,7 +440,7 @@
       }
     ],
 
-    "category": "tranquilité",
+    "category": "Tranquilité",
     "urlCategory": "tranquilite"
   },
 
@@ -477,12 +477,12 @@
       }
     ],
 
-    "category": "dignité",
+    "category": "Dignité",
     "urlCategory": "dignite"
   },
   {
-    "name": "Aide aux personnes en precarite",
-    "urlName": "",
+    "name": "Aide aux personnes en précarite",
+    "urlName": "Aide-aux-personnes-en-precarite",
     "icon": "URL",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",

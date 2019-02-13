@@ -12,7 +12,7 @@ h3 {
   color: pink; }
 
 a {
-  color: #00B7FF; }
+  color: #00b7ff; }
 
 label {
   display: block;
@@ -46,18 +46,23 @@ ul {
   padding: 10px 20px;
   margin: 20px 10px; }
 
-.passwordError-message, .admin-error-message {
+.passwordError-message,
+.admin-error-message {
   display: block;
   border: 3px solid #b0cc14;
   border-radius: 5px;
   padding: 10px 20px;
   margin: 20px 10px; }
 
-.logOutSuccess-message, .add-room-success-message {
+.logOutSuccess-message,
+.add-room-success-message {
   display: block;
   border: 3px solid #14a1cc;
   border-radius: 5px;
   padding: 10px 20px;
   margin: 20px 10px; }
+
+.title-category ::first-letter {
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=style.css.map */

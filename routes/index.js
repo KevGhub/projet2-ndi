@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const Category = require("../models/category-model.js");
 
 // HOMEPAGE ROUTER --------------------------------------------------------------
 //####################################################################
@@ -9,10 +10,11 @@ router.get("/", (req, res, next) => {
 });
 
 //HOMEPAGE TO INCIVILITIES CATEGORY ****************************************
-router.get("/incivility-category", (req, res, next) => {
+router.get("/incivilites-categories", (req, res, next) => {
   Category.find()
-
     .then(categoryResults => {
+      console.log(categoryResults);
+
       res.locals.categoryArray = categoryResults;
       res.render("incivilities-views/inc-categories.hbs");
     })
@@ -26,7 +28,7 @@ router.get("/request-category", (req, res, next) => {
   Category.find()
 
     .then(categoryResults => {
-      res.locals.categoryArray = categoryResults;
+      res.locals.category1Array = categoryResults;
       res.render("requests-views/req-categories.hbs");
     })
 

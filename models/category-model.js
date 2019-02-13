@@ -6,6 +6,6 @@ const categorySchema = new Schema({
   icon: { type: String, default: "URL" } // ?photo default?
 });
 
-const Category = mongoose.model("Category", categorySchema);
+const Category = mongoose.model("Category", categorySchema, "catergory");
 
 module.exports = Category;

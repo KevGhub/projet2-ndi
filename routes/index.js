@@ -35,4 +35,19 @@ router.get("/requete-categorie", (req, res, next) => {
     .catch(err => next(err));
 });
 
+//HOMEPAGE TO ABOUT PAGE ****************************************
+router.get("/a-propos-de-vous", (req, res, next) => {
+  res.render("about.hbs");
+});
+
+//HOMEPAGE TO CONTACT PAGE ****************************************
+router.get("/contact", (req, res, next) => {
+  res.render("contact.hbs");
+});
+
+//HOMEPAGE TO ABOUT PAGE ****************************************
+router.get("/mentions-Legales", (req, res, next) => {
+  res.render("mentions-legales.hbs");
+});
+
 module.exports = router;

@@ -1,14 +1,14 @@
-<H1>TEST</H1>
-
-<h2> {{categoryResults}}</h2>
+<h1>{{incivilityArray.[0].category}}</h1>
 
 
-{{#each incivilityResults}}
-<li>
-  <a href="/incivilites-categories-{{this.urlName}}-liste">
-    <h3>{{this.name}}</h3>
-  </a>
 
-</li>
-{{/each}}
+<ul>
+  {{#each incivilityArray}}
+  <li>
+    <a href="/incivilites/{{this.urlName}}">
+      <h3>{{this.name}}</h3>
+    </a>
+
+  </li>
+  {{/each}}
 </ul>

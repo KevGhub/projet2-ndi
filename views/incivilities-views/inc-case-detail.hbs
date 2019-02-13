@@ -1,14 +1,49 @@
-<H1>TEST</H1>
-
-<h2> {{incivilityResults}}</h2>
+<h2>{{incivilityArray.[0].category}}</h2>
 
 
-{{#each incivilityResults}}
-<li>
-  <a href="/incivilites-categories-Protection-cases-{{this.name}}">
+
+<ul>
+  {{#each incivilityArray}}
+  <li>
+
     <h3>{{this.name}}</h3>
-  </a>
 
-</li>
-{{/each}}
+    <p>{{this.description}}</p>
+    <p>{{this.law}}</p>
+
+    <p>{{#each this.associations}}</p>
+    {{this.name}}
+    {{this.url}}
+    <img src="{{this.img}}" alt="">
+    {{/each}}
+
+
+
+
+
+
+
+  </li>
+  {{/each}}
 </ul>
+
+
+{{!--
+
+const incivilitySchema = new Schema(
+{
+name: { type: String, required: true },
+urlName: { type: String },
+
+//category: ["protection", "environnement", "tranquilite", "dignite"],
+category: { type: String },
+
+urlCategory: { type: String },
+
+icon: { type: String, default: URL }, // ? URL ?
+description: { type: String, required: true },
+law: { type: String, required: true },
+associations: [
+{ name: { type: String }, img: { type: "String" }, url: { type: String } }
+]
+}, --}}

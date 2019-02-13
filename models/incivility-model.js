@@ -8,7 +8,8 @@ const incivilitySchema = new Schema(
     name: { type: String, required: true },
     urlName: { type: String },
 
-    category: ["protection", "environnement", "tranquilite", "dignite"],
+    //category: ["protection", "environnement", "tranquilite", "dignite"],
+    category: { type: String },
 
     urlCategory: { type: String },
 
@@ -16,7 +17,11 @@ const incivilitySchema = new Schema(
     description: { type: String, required: true },
     law: { type: String, required: true },
     associations: [
-      { name: { type: String }, img: { type: "String" }, url: { type: String } }
+      {
+        name: { type: String },
+        img: { type: String, default: "http://gph.is/1Kjtlft" },
+        url: { type: String }
+      }
     ]
   },
 

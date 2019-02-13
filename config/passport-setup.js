@@ -8,8 +8,8 @@ passport.serializeUser((userResult, done) => {
 });
 
 
-passport.deserializeUser((userId, done) => {
-  User.findOne(userId.email)
+passport.deserializeUser((userEmail, done) => {
+  User.findOne({ email: { $eq: userEmail } })
     .then(userResult => {
       done(null, userResult);
     })

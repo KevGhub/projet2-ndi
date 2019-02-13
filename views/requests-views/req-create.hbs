@@ -1,0 +1,35 @@
+<h2>Créer une requête</h2>
+
+{{!-- NEED enctype="multipart/form-data" for UPLOUADING FILES --}}
+{{!-- NEED to change the page from action="" --}}
+
+<form action="/verif-create-req" method="post" >
+  <label>
+    <b>Titre de la requête</b> :
+    <input type="text" name="title" placeholder="Quelques mots suffisent" required>
+  </label>
+
+  <label>
+    <b>Objectif(s)</b> (Quel est votre but en déposant cette requête):
+    <input type="text" name="goal" placeholder="Soyez percutant" required>
+  </label>
+
+  <label>
+    <b>Lieu</b> (rue, arrondissement, etc...):
+    <input type="text" name="place" placeholder="Soyez précis" required>
+  </label>
+
+  <label>
+    <b>Description</b> (Décrivez avec le plus de détails possible):
+    <textarea type="text" rows="5" cols="33" name="description" placeholder="Soyez convainquant" required></textarea>
+  </label>
+{{!-- 
+  <label>
+    <b>Ilistrer la requête</b> (jpeg, jpg, png ):
+    <input type="file" name="pictureUpload" required>
+  </label> --}}
+  {{!-- give a different name to the password to encrypt it first THEN save it in the database --}}
+  {{!-- type='file' = creat the input that open the pc folder window --}}
+
+  <button>Créer votre requête</button>
+</form>

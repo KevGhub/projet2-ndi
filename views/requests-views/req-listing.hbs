@@ -1,0 +1,17 @@
+<h3>Requêtes </h3>
+
+<a href="/nouvelle-requete">Créer une requête</a>
+
+<ul>
+  {{#each reqCategoriesResults}}
+  <li>
+    <h3>{{this.title}}</h3>
+    <br>
+    <p>{{this.goal}}</p>
+    <br>
+    <img src="{{this.img}}" alt="Requête photo">
+    <br>
+    <a href="/requete-detail">Voir la requête</a>
+  </li>
+  {{/each}}
+</ul>

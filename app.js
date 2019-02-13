@@ -50,6 +50,7 @@ app.use(
     sourceMap: true
   })
 );
+
 hbs.registerPartials(path.join(__dirname, "views", "partials"));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
@@ -64,7 +65,7 @@ app.use(
     resave: true,
     // SECRET SHOULD BE A STRING TAH'S DIFFERENT FOR EVERY APP
     //ALWAYS WRITE SECRET IN .ENV THATS IS IN GITIGNORE beceause secret can creat a new cookie
-    secret: "ca^khT8KYd,G73C7R9(;^atb?h>FTWdbn4pqEFUKs3",
+    secret: "hiohiehqdjidùsqhs$fiaa",
     store: new MongoStore({ mongooseConnection: mongoose.connection })
   })
 );
@@ -83,7 +84,7 @@ app.use(flash());
 app.use((req, res, next) => {
   // send flash message to the hbs files
   // (req.flash() comes from the 'connect-flash' npm package)
-  res.locals.messages = req.flash();
+  res.locals.message = req.flash();
 
   //send the logged in user's info to hbs files for ALL pages
   // (req.user is defined by Passport and contains the logged in user's info)
@@ -101,7 +102,10 @@ app.locals.title = "Nos Douces Incivilités";
 const index = require("./routes/index");
 app.use("/", index);
 
-const incCategory = require("./routes/incivilities/inc-categories-router.js");
-app.use("/", incCategory);
+const auth = require("./routes/autho-router");
+app.use("/", auth);
+
+const account = require("./routes/user-account-router");
+app.use("/", account);
 
 module.exports = app;

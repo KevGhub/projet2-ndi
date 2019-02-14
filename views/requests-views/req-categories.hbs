@@ -1,11 +1,12 @@
-<h2> Douces Requêtes</h2>
-
+<h2> Nos Douces Requêtes</h2>
 
 <ul>
   {{#each categoryResults}}
   <li>
-   <a href="/liste-requetes"><h3>{{this.name}}</h3></a> 
-    <p>by {{this.icon}}</p>
+    <p>{{this.icon}}</p>
+    <a href="/liste-requetes">
+      <h3>{{this.name}}</h3>
+    </a>
 
   </li>
   {{/each}}

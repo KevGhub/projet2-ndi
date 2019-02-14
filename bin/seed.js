@@ -16,7 +16,7 @@ const categoriesData = require("./categories.json");
 // get the Incivilities-data from json file
 
 mongoose
-  .connect("mongodb://localhost/ndi-data", { useNewUrlParser: true })
+  .connect(process.env.MONGODB_URI, { useNewUrlParser: true })
   .then(x => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}💥"`
@@ -43,7 +43,3 @@ Category.insertMany(categoriesData)
   .catch(err => {
     console.log("Insert FAILURE", err);
   });
-
-
-
-

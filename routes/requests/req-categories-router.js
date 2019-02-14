@@ -22,7 +22,7 @@ router.get("/nouvelle-requete", (req, res, next) => {
 });
 //*********************************************************************
 
-// fileUploader.single('pictureUpload'),
+
 // PROCESSING VERIFICATION ****************************************
 router.post("/verif-create-req", fileUploader.single("pictureUpload"), (req, res, next) => {
   // enforce login rules to access create a request ***************************
@@ -31,15 +31,23 @@ router.post("/verif-create-req", fileUploader.single("pictureUpload"), (req, res
     res.redirect("/identification");
   } else {
 
-    const { title, description, place, goal } = req.body;
+    const { title, description, place, goal, category } = req.body;
     const creator = req.user._id;
     let img;
     if (req.file) {
       img = req.file.secure_url;
     }
 
-    //create a room ****************************************
-    Request.create({ title, description, place, goal, creator, img })
+    //create a requet ****************************************
+    Request.create({
+      title,
+      description,
+      place,
+      goal,
+      creator,
+      img,
+      category
+    })
       .then(requestDoc => {
         User.findByIdAndUpdate(req.user._id, {
           $push: { userRequest: requestDoc._id }
@@ -62,7 +70,7 @@ router.get("/requete-detail/:id", (req, res, next) => {
   Request.findById(req.params.id)
     .then(reqDoc => {
       res.locals.reqDoc = reqDoc;
-      res.render("requests-views/req-detail" + reqDoc._id);
+      res.render("requests-views/req-detail");
     })
     .catch(err => next(err));
   

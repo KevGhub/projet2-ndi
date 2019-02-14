@@ -1,8 +1,20 @@
 <h2>Créer une requête</h2>
 
-{{> auth_message}}
+{{> auth_message}} 
 
 <form action="/verif-create-req" method="post" enctype="multipart/form-data">
+  <label>
+    <b>Catégorie de l'incivilité</b> :
+    <label for="Protection">Protection</label>
+    <input type="radio" name="category" value="Protection">
+    <label for="Environnement">Environnement</label>
+    <input type="radio" name="category" value="Environnement">
+    <label for="Tranquilite">Tranquilité</label>
+    <input type="radio" name="category" value="Tranquilite">
+    <label for="Dignite">Dignité</label>
+    <input type="radio" name="category" value="Dignite">
+  </label>
+
   <label>
     <b>Titre de la requête</b> :
     <input type="text" name="title" placeholder="Quelques mots suffisent" required>

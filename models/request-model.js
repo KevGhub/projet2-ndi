@@ -11,13 +11,17 @@ const requestSchema = new Schema(
       type: String,
       default: "https://media.giphy.com/media/3o7bukvWq54k2Q9H2w/giphy.gif"
     },
-    creator: { type: Schema.Types.ObjectId, ref: "User" }
+    creator: { type: Schema.Types.ObjectId, ref: "User" },
+    category: {
+      type: String,
+      enum: ["Protection", "Environnement", "Tranquilite", "Dignite"],
+      required: true }
   },
   {
     timestamps: true
   }
 );
 
-const Request = mongoose.model("Request", requestSchema, "request");
+const Request = mongoose.model("Request", requestSchema);
 
 module.exports = Request;

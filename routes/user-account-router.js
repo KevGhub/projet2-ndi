@@ -17,20 +17,20 @@ router.get("/mon-compte/:id", (req, res, next) => {
     const userRequest = req.user._id;  
       // GET USER'S INFO **************************************************
       User.findById(req.params.id)
-      .then(userDoc => {
-        res.locals.userDoc = userDoc;
-        res.redirect("user-account-views/user-account" + userDoc._id);
-      })
-      .then(
-        // GET USER'S REQUEST **************************************************
-        Request.findById(userRequest)
-        .sort({ createdAt: -1 })
-        .then(reqUser => {
-          res.locals.reqUser = reqUser;
-          res.render("user-account-views/user-account");    
+        .then(userDoc => {
+          res.locals.userDoc = userDoc;
         })
-      )
-      .catch(err => next(err));
+        .then(
+          // GET USER'S REQUEST **************************************************
+          Request.findOne({ creator: userRequest })
+            .sort({ createdAt: -1 })
+            .then(reqUser => {
+              console.log(reqUser);
+              res.locals.reqUser = reqUser;
+              res.render("user-account-views/user-account"  );
+            })
+        )
+        .catch(err => next(err));
 
     
   }

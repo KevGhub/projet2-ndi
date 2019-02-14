@@ -17,6 +17,12 @@ const passport = require("passport");
 // run the code inide the file, no need a const cause won't use it in any other page
 require("./config/passport-setup");
 
+// HERUKO (DO THE SAME STEPS IN SEED FILE)
+//copy/paste in .env file the name of the conf vars from heroku (ex: MONGONDB_URL)
+//add the local adresse from the connect mongo (ex: .connect("mongodb://localhost/ndi-data", { useNewUrlParser: true }) )
+//Then remplace the local address by the conf var in .env file like that => MONGONDB_URL=mongodb://localhost/ndi-data
+// Then in .connect use the var like that => .connect( process.env.MONGONDB_URL, { useNewUrlParser: true }) )
+
 mongoose
   .connect("mongodb://localhost/ndi-data", { useNewUrlParser: true })
   .then(x => {

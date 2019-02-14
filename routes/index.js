@@ -14,8 +14,6 @@ router.get("/", (req, res, next) => {
 router.get("/incivilites-categorie", (req, res, next) => {
   Category.find()
     .then(categoryResults => {
-      console.log(categoryResults);
-
       res.locals.categoryArray = categoryResults;
       res.render("incivilities-views/inc-categories.hbs");
     })
@@ -26,7 +24,6 @@ router.get("/incivilites-categorie", (req, res, next) => {
 //HOMEPAGE TO REQUESTS CATEGORY ****************************************
 router.get("/requete-categorie", (req, res, next) => {
   Category.find()
-
     .then(categoryResults => {
       res.locals.categoryResults = categoryResults;
       res.render("requests-views/req-categories.hbs");

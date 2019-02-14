@@ -64,6 +64,28 @@ router.post(
 //*********************************************************************
 // END ADD A ROOM --------------------------------------------------------------
 
+// REQUEST CATEGORIES LISTING to category list ****************************************
+router.get("/requete-categorie/:oneCategory", (req, res, next) => {
+  Request.find({ category: { $eq: req.params.oneCategory } })
+    .then(requeteResults => {
+      console.log(requeteResults);
+      res.locals.requeteResults = requeteResults;
+      res.render("requests-views/req-listing");
+    })
+    .catch(err => next(err));
+});
+
+//GET TO REQUEST CATEGORIES LISTING PAGE****************************************
+// router.get("/liste-requetes", (req, res, next) => {
+//   Request.find()
+
+//     .then(reqCategoriesResults => {
+//       res.locals.reqCategoriesResults = reqCategoriesResults;
+//       res.render("requests-views/req-listing");
+//     });
+// });
+//*********************************************************************
+
 //GET TO REQUEST DETAIL PAGE****************************************
 router.get("/requete-detail/:id", (req, res, next) => {
   Request.findById(req.params.id)
@@ -76,17 +98,6 @@ router.get("/requete-detail/:id", (req, res, next) => {
 
 //---------- VOTE
 
-//*********************************************************************
-
-//GET TO REQUEST CATEGORIES LISTING PAGE****************************************
-router.get("/liste-requetes", (req, res, next) => {
-  Request.find()
-    .sort({ createdAt: -1 })
-    .then(reqCategoriesResults => {
-      res.locals.reqCategoriesResults = reqCategoriesResults;
-      res.render("requests-views/req-listing");
-    });
-});
 //*********************************************************************
 
 module.exports = router;

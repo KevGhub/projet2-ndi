@@ -13,7 +13,10 @@ const incivilitySchema = new Schema(
 
     urlCategory: { type: String },
 
-    icon: { type: String, default: URL }, // ? URL ?
+    icon: {
+      type: String,
+      default: "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif"
+    }, // ? URL ?
     description: { type: String, required: true },
     law: { type: String, required: true },
     associations: [

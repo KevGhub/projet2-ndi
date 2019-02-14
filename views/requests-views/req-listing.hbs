@@ -1,9 +1,7 @@
-<h3>Requêtes </h3>
-
-<a href="/nouvelle-requete">Créer une requête</a>
+<h3>Requêtes {{requeteResults.category.enumValues}}</h3>
 
 <ul>
-  {{#each reqCategoriesResults}}
+  {{#each requeteResults.category}}
   <li>
     <h3>{{this.title}}</h3>
     <br>
@@ -17,3 +15,7 @@
   </li>
   {{/each}}
 </ul>
+
+<hr>
+<br>
+<a href="/nouvelle-requete">Créer une requête</a>

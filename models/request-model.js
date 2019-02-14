@@ -7,8 +7,8 @@ const requestSchema = new Schema(
     description: { type: String, required: true, minlength: 100 },
     place: { type: String, required: true },
     goal: { type: String, required: true },
-    voteAim: { type: Number },
-    numberOfVote: { type: Number },
+    // voteAim: { type: Number },
+    numberOfVote: { type: Number, default: 0 },
 
     img: {
       type: String,

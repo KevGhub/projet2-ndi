@@ -1,37 +1,31 @@
 <h2>Requête </h2>
 
 <ul>
-  {{#each reqDoc}}
   <li>
-    <h4>{{this.category}}</h4>
-    <h3>{{this.title}}</h3>
+    <h4>{{reqDoc.category}}</h4>
+    <h3>{{reqDoc.title}}</h3>
     <br>
-    <p>{{this.goal}}</p>
+    <p>{{reqDoc.goal}}</p>
     <br>
-    <p>{{this.description}}</p>
+    <p>{{reqDoc.description}}</p>
     <br>
-    <p>{{this.place}}</p>
+    <p>{{reqDoc.place}}</p>
     <br>
-    <img src="{{this.img}}" alt="Requête photo">
+    <img src="{{reqDoc.img}}" alt="Requête photo">
 
 
 
     <p>
-      <script type="text/javascript">
-        var clicks = 0;
-        function onClick() {
-          clicks += 1;
-          document.getElementById("clicks").innerHTML = clicks;
-        };
-      </script>
 
-      <button type="button" onClick="onClick()">Votez pour cette requête</button>
-      <p>Votes: <a id="clicks">0</a></p>
+
+      <form method="POST" action="/requete-detail/{{reqDoc._id}}/vote">
+        <button class="badge badge-dark">Votez pour cette requête</button>
+      </form>
+      <p>Votes: <a id="clicks">{{reqDoc.numberOfVote}}</a></p>
     </p>
 
   </li>
 
-  {{/each}}
 </ul>
 
 

@@ -99,5 +99,17 @@ router.get("/requete-detail/:id", (req, res, next) => {
 //---------- VOTE
 
 //*********************************************************************
+router.post("/requete-detail/:id/vote", (req, res, next) => {
+  Request.findByIdAndUpdate(req.params.id, {
+    $inc: {
+      numberOfVote: 1
+    }
+  })
+    .then(reqDoc => {
+      res.locals.reqDoc = reqDoc;
+      res.redirect(`/requete-detail/${reqDoc._id}`);
+    })
+    .catch(err => next(err));
+});
 
 module.exports = router;

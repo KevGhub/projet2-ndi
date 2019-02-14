@@ -18,7 +18,7 @@ const passport = require("passport");
 require("./config/passport-setup");
 
 mongoose
-  .connect("mongodb://localhost/ndi-data", { useNewUrlParser: true })
+  .connect(process.env.MONGODB_URI, { useNewUrlParser: true })
   .then(x => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}🙅‍♂️"`
@@ -65,7 +65,7 @@ app.use(
     resave: true,
     // SECRET SHOULD BE A STRING TAH'S DIFFERENT FOR EVERY APP
     //ALWAYS WRITE SECRET IN .ENV THATS IS IN GITIGNORE beceause secret can creat a new cookie
-    secret: "hiohiehqdjidùsqhs$fiaa",
+    secret: process.env.SESSION_SECRET,
     store: new MongoStore({ mongooseConnection: mongoose.connection })
   })
 );
@@ -115,3 +115,36 @@ const IncCategories = require("./routes/incivilities/inc-categories-router");
 app.use("/", IncCategories);
 
 module.exports = app;
+
+// HEROKU
+
+/* 
+HEROKU CREATION STEP'S
+1- create app
+2- go to app, ressources tab (add Mlab)
+3- (optional for data) Settings >> config bar >> MONGO_URL : copy the link only >> open mongoDB (and it see that = accept)
+4- On code :in file env. defined varName=password // on code app.js remplacer par varName (for secret ; email/pass ; cloudinarycount/pass)
+5- in config bar section (DON'T put the port number in heroku setting)
+6- heroku git:remote -a AppNameInHeroku
+7-git push heroku master (after enough modification - push for user on URL)
+
+
+ON TERMINAL, for heroku
+brew tap heroku/brew && brew install heroku    (One time for install)
+
+heroku login
+
+heroku git:remote -a nosdoucesincivilites2
+
+git push heroku master    (after enough modification - push for user on URL)
+
+
+heroku open (open on browser - without deploy for user)
+
+
+heroku run is
+
+heroku logs
+
+heroku run node bin/admin-seed.js
+*/

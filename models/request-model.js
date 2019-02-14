@@ -7,6 +7,9 @@ const requestSchema = new Schema(
     description: { type: String, required: true, minlength: 100 },
     place: { type: String, required: true },
     goal: { type: String, required: true },
+    voteAim: { type: Number },
+    numberOfVote: { type: Number },
+
     img: {
       type: String,
       default: "https://media.giphy.com/media/3o7bukvWq54k2Q9H2w/giphy.gif"
@@ -15,7 +18,8 @@ const requestSchema = new Schema(
     category: {
       type: String,
       enum: ["Protection", "Environnement", "Tranquilite", "Dignite"],
-      required: true }
+      required: true
+    }
   },
   {
     timestamps: true

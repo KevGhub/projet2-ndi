@@ -13,6 +13,40 @@
     <p>{{this.place}}</p>
     <br>
     <img src="{{this.img}}" alt="Requête photo">
+
+
+
+    <p>
+      <script type="text/javascript">
+        var clicks = 0;
+        function onClick() {
+          clicks += 1;
+          document.getElementById("clicks").innerHTML = clicks;
+        };
+      </script>
+
+      <button type="button" onClick="onClick()">Votez pour cette requête</button>
+      <p>Votes: <a id="clicks">0</a></p>
+    </p>
+
   </li>
+
   {{/each}}
 </ul>
+
+
+
+
+
+{{!--
+
+{{#if loggedUser}}
+<b>{{loggedUser.pseudo}}</b>
+<br>
+<a href="/mon-compte/{{loggedUser._id}}">Mon profile</a>
+<br>
+<a href="/deconnexion">Déconnextion</a>
+
+{{else}}
+<a href="/identification">Mon compte</a>
+{{/if}} --}}

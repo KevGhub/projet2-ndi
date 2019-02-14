@@ -6,13 +6,13 @@ const router = express.Router();
 
 // SIGNUP --------------------------------------------------------------
 //####################################################################
-router.get('/identification', (req, res, next) => {
-  res.render('auth-views/log-sign-form')
+router.get("/identification", (req, res, next) => {
+  res.render("auth-views/log-sign-form");
 });
 
 // \\  PROCESSING SIGNUP VERIFICATION ****************************************
 router.post(
-  "/verif-signup", 
+  "/verif-signup",
   fileUploader.single("pictureUpload"),
   (req, res, next) => {
     const {
@@ -21,7 +21,7 @@ router.post(
       email,
       originalPassword,
       age,
-      pseudo,
+      pseudo
     } = req.body;
 
     // \\*********************************************************************
@@ -57,9 +57,15 @@ router.post(
       pseudo,
       profileImg
     })
-      .then(() => {
+      .then(userDoc => {
         req.flash("logSuccess", `Inscription SUCCESS 🦖`);
-        res.redirect("/identification");
+        req.logIn(userDoc, () => {
+          req.flash("success", "Log in success! 🤜✨🤛 ");
+          res.redirect("/mon-compte/" + userDoc._id);
+          return;
+        });
+
+        // res.redirect("/identification");
       })
       .catch(err => next(err));
   }
@@ -67,7 +73,7 @@ router.post(
 // \\*********************************************************************
 
 // PROCESSING LOGIN VERIFICATION ****************************************
-router.post('/verif-login', (req, res, next) => {
+router.post("/verif-login", (req, res, next) => {
   const { email, originalPassword } = req.body;
   //*********************************************************************
 
@@ -75,17 +81,20 @@ router.post('/verif-login', (req, res, next) => {
   User.findOne({ email: { $eq: email } })
     .then(userResult => {
       if (!userResult) {
-        req.flash('emailError', `Email is incorrect 🌚`);
+        req.flash("emailError", `Email is incorrect 🌚`);
         res.redirect("/identification");
-        return
-      };
+        return;
+      }
       //*********************************************************************
 
       // validate the password ****************************************
       const { encryptedPassword } = userResult;
 
       if (!bcrypt.hashSync(originalPassword, encryptedPassword)) {
-        req.flash('passwordError', `Password can't be blank and must contain a number 🥊`);
+        req.flash(
+          "passwordError",
+          `Password can't be blank and must contain a number 🥊`
+        );
         res.redirect("/identification");
         return;
       }
@@ -93,9 +102,9 @@ router.post('/verif-login', (req, res, next) => {
 
       // EMAIL & PASSWORD ARE CORRECT ****************************************
       req.logIn(userResult, () => {
-        req.flash('logSuccess', `Log In SUCCESS 🏆`);
-        res.redirect('/');
-      })
+        req.flash("logSuccess", `Log In SUCCESS 🏆`);
+        res.redirect("/");
+      });
       // *********************************************************************
     })
     .catch(err => next(err));
@@ -103,20 +112,16 @@ router.post('/verif-login', (req, res, next) => {
 // END LOGIN ROUTER  --------------------------------------------------------------
 //####################################################################
 
-
-
 // LOGOUT ROUTER --------------------------------------------------------------
 //####################################################################
-router.get('/deconnexion', (req, res, next) => {
+router.get("/deconnexion", (req, res, next) => {
   req.logout();
   req.session.save(() => {
-    req.flash('logOutSuccess', `Log OUT SUCCESS 🏆`);
-    res.redirect('/');
+    req.flash("logOutSuccess", `Log OUT SUCCESS 🏆`);
+    res.redirect("/");
   });
 });
 // END LOGOUT ROUTER --------------------------------------------------------------
 //####################################################################
-
-
 
 module.exports = router;

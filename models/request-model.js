@@ -15,6 +15,11 @@ const requestSchema = new Schema(
     category: {
       type: String,
       enum: ["Protection", "Environnement", "Tranquilite", "Dignite"],
+      required: true
+    },
+    urlCat: {
+      type: String,
+      enum: ["protection", "environnement", "tranquilite", "dignite"],
       required: true }
   },
   {

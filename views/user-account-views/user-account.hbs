@@ -9,22 +9,22 @@
   <b>{{userDoc.firstName}}</b> , <b>{{userDoc.lastName}}</b>
 </div>
 
-<div class="user-req">
+
+
+
   <h4>Mes requêtes</h4>
-  <ul>
-    {{#each reqUser}}
-    <li>
-      <h3>{{this.title}}</h3>
-      <br>
-      <p>{{this.goal}}</p>
-      <br>
-      <img src="{{this.img}}" alt="Requête photo">
-      <br>
-      <a href="/requete-detail/{{this._id}}">Voir la requête</a>
-    </li>
-    {{/each}}
-  </ul>
+     <div class="user-req"> 
+        <h3>{{reqUser.title}}</h3>
+        <br>
+        <p>{{reqUser.goal}}</p>
+        <br>
+        <img src="{{reqUser.img}}" alt="Requête photo">
+        <br>
+        <a href="/requete-detail/{{reqUser._id}}">Voir la requête</a>
+        <br>
+      <a href="/nouvelle-requete">Créer une requête</a>
+    </div>
+
   
-  <a href="/nouvelle-requete">Créer une requête</a>
-</div>
+
 

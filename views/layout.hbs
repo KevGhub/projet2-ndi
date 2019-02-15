@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
+  <meta name="description" content="Bienvenue sur Nos Douces Incivilités. Site d'échange et d'action solidaire">
+  <link href="https://fonts.googleapis.com/css?family=ABeeZee|Saira:300,400,500,600,700" rel="stylesheet">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
     crossorigin="anonymous" />
@@ -21,46 +23,47 @@
 <body>
 
   <header>
-    <h1>{{title}}</h1>
 
-    <nav>
-      <a href="/">Accueil</a>
-      <br>
-      <a href="/a-propos-de-vous">À propos de vous</a>
-      <br>
-      <a href="/incivilites-categorie">Douces incivilités</a>
-      <br>
-      <a href="/requete-categorie">Douces requêtes</a>
-
-      <br>
-      {{#if loggedUser}}
-      <b>{{loggedUser.pseudo}}</b>
-      <br>
-      <a href="/mon-compte/{{loggedUser._id}}">Mon profile</a>
-      <br>
-      <a href="/deconnexion">Déconnextion</a>
-
-      {{else}}
-      <a href="/identification">Mon compte</a>
-      {{/if}}
-    </nav>
+<nav class="navbar  navbar-expand-lg navbar-light ">
+  <div class="">
+  <a class="navbar-brand p-0" href="/">
+    <img src="/images/logo.png" width="150" height="60" class="d-inline-block align-top"
+      alt="logo">
+    <h1 class="d-none">{{title}}</h1>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  </div>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <a class="nav-link" href="/">Accueil <span class="sr-only">(current)</span></a>
+    <a class="nav-link" href="/a-propos-de-vous">À propos de vous</a>
+    <a class="nav-link" href="/incivilites-categorie">Douces incivilités</a>
+    <a class="nav-link" href="/requete-categorie">Douces requêtes</a>
+    {{#if loggedUser}}
+    <a class="nav-link" href="/mon-compte/{{loggedUser._id}}">Mon profile</a>
+    <a class="nav-link" href="/deconnexion">Déconnextion</a>
+    {{else}}
+    <a class="nav-link" href="/identification">Mon compte</a>
+    {{/if}}
+  </div>
+</nav>
   </header>
 
   {{{body}}}
 
-  <footer>
-    <ul>
-      <li><a href="/mentions-legales">Mentions Légales</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-
-    <ul>
-      <li><a href="https://www.instagram.com/">instagram</a></li>
-      <li><a href="https://twitter.com/">Twitter</a></li>
-      <li><a href="https://fr-fr.facebook.com/">Facebook</a></li>
-    </ul>
-
-
+  <footer class="bg-info container-fluid py-2 ">
+          <div class="info-link d-flex justify-content-around align-items-center">
+            <a href="/mentions-legales">Mentions Légales</a>
+            <a href="/contact">Contact</a>
+            <a href="https://www.instagram.com/">Instagram</a>
+            <a href="https://twitter.com/">Twitter</a>
+            <a href="https://fr-fr.facebook.com/">Facebook</a>
+            <a class="p-0" href="/">
+              <img src="/images/logo.png" width="150" height="60" class="d-inline-block align-top" alt="logo">
+            </a>
+          </div>
   </footer>
 
 

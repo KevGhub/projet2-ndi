@@ -1,19 +1,17 @@
 <h2>Requête </h2>
 
 <ul>
-  {{#each reqDoc}}
   <li>
-    <h4>{{this.category}}</h4>
-    <h3>{{this.title}}</h3>
+    <h4>{{reqDoc.category}}</h4>
+    <h3>{{reqDoc.title}}</h3>
     <br>
-    <p>{{this.goal}}</p>
+    <p>{{reqDoc.goal}}</p>
     <br>
-    <p>{{this.description}}</p>
+    <p>{{reqDoc.description}}</p>
     <br>
-    <p>{{this.place}}</p>
+    <p>{{reqDoc.place}}</p>
     <br>
-    <img src="{{this.img}}" alt="Requête photo">
+    <img src="{{reqDoc.img}}" alt="Requête photo">
   </li>
-  {{/each}}
 </ul>
-<a href="/liste-requetes">Retour aux requêtes</a>
+<a href="/requete-categorie">Retour aux requêtes</a>

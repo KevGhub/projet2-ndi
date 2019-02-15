@@ -30,9 +30,10 @@ router.post("/verif-create-req", fileUploader.single("pictureUpload"), (req, res
     req.flash("logError", `You have to be logged in ! 🥣`);
     res.redirect("/identification");
   } else {
-
+    
     const { title, description, place, goal, category } = req.body;
     const creator = req.user._id;
+    const urlCat = category.toLowerCase();
     let img;
     if (req.file) {
       img = req.file.secure_url;
@@ -46,7 +47,8 @@ router.post("/verif-create-req", fileUploader.single("pictureUpload"), (req, res
       goal,
       creator,
       img,
-      category
+      category,
+      urlCat
     })
       .then(requestDoc => {
         User.findByIdAndUpdate(req.user._id, {
@@ -67,26 +69,17 @@ router.post("/verif-create-req", fileUploader.single("pictureUpload"), (req, res
 
 // REQUEST CATEGORIES LISTING to category list ****************************************
 router.get("/requete-categorie/:oneCategory", (req, res, next) => {
-  Request.find({ category: { $eq: req.params.oneCategory } })
+  Request.find({ urlCat: { $eq: req.params.oneCategory } })
     .then(requeteResults => {
       console.log(requeteResults);
       res.locals.requeteResults = requeteResults;
       res.render("requests-views/req-listing");
     })
     .catch(err => next(err));
+  
+  
 });
 
-
-//GET TO REQUEST CATEGORIES LISTING PAGE****************************************
-// router.get("/liste-requetes", (req, res, next) => {
-//   Request.find()
-    
-//     .then(reqCategoriesResults => {
-//       res.locals.reqCategoriesResults = reqCategoriesResults;
-//       res.render("requests-views/req-listing");
-//     });
-// });
-  //*********************************************************************
 
 
 

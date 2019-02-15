@@ -13,11 +13,15 @@ h2 {
   font-family: "Saira", Helvetica, Arial, sans-serif;
   font-size: 1.7em;
   margin-top: 15px;
-  color: #84e484; }
+  color: #366E6E; }
 
 h3 {
   font-family: "Saira", Helvetica, Arial, sans-serif;
-  color: pink; }
+  color: #ffc10799; }
+
+h4 {
+  font-family: "Saira", Helvetica, Arial, sans-serif;
+  color: #71b1e3; }
 
 a {
   color: #00b7ff; }
@@ -37,11 +41,17 @@ ul {
   list-style: none; }
 
 .navbar {
-  background-color: #ffc10799; }
+  background-color: #FDFCF3; }
 
 .navbar a,
 footer a {
   font-size: 1.2rem; }
+
+.navbar a {
+  color: #EF8D6A; }
+
+.footer a {
+  color: #366E6E; }
 
 .nav-link:hover {
   -webkit-transform: scale(1.1);
@@ -49,7 +59,7 @@ footer a {
   transform: scale(1.1); }
 
 .nav-link.current-link {
-  color: white;
+  color: #71b1e3;
   font-size: 1.5rem; }
 
 .logError-message {
@@ -101,14 +111,14 @@ footer a {
   color: #ffd4ad; }
 
 .index-card-img-top {
-  width: 60%; }
+  width: 35%; }
 
 .index-card-title-inc {
   padding: 10px 25px;
   color: #ffd4ad; }
 
 .inc-case-bg {
-  background-color: greenyellow;
+  background-color: #DCF2F6;
   border: black solid 1px; }
 
 .card-img-top-inc-case {
@@ -118,7 +128,7 @@ footer a {
   background-color: #ffd4ad; }
 
 .card-text-inc-case {
-  color: greenyellow; }
+  color: #6EA9C9; }
 
 .card-img-top-assos {
   width: 100%; }
@@ -127,10 +137,16 @@ footer a {
   background-color: #ffd4ad; }
 
 .inc-cat-bg.protection {
-  background-color: red; }
+  background-color: #DCF2F6; }
 
 .inc-cat-bg.tranquilite {
-  background-color: blue; }
+  background-color: #F4EEDF; }
+
+.inc-cat-bg.environnement {
+  background-color: #D4F5DB; }
+
+.inc-cat-bg.dignite {
+  background-color: #F7D0C2; }
 
 .card-img-top-inc-cat {
   width: 60%; }
@@ -142,28 +158,28 @@ footer a {
   color: #ffd4ad; }
 
 .cat-url-bg.protection {
-  background-color: #daf1f5; }
+  background-color: #DCF2F6; }
 
 .cat-url-bg.dignite {
-  background-color: red; }
+  background-color: #F7D0C2; }
 
 .cat-url-bg.tranquilite {
-  background-color: blue; }
+  background-color: #F4EEDF; }
 
 .cat-url-bg.environnement {
-  background-color: green; }
+  background-color: #D4F5DB; }
 
 .card-body-url-cat.protection {
-  background-color: pink; }
+  background-color: #6EA9C9; }
 
 .card-body-url-cat.dignite {
-  background-color: violet; }
+  background-color: #E27269; }
 
 .card-body-url-cat.tranquilite {
-  background-color: yellow; }
+  background-color: #D3C99B; }
 
 .card-body-url-cat.environnement {
-  background-color: orange; }
+  background-color: #90CC92; }
 
 .index-req-section {
   background-color: #8cabb9;
@@ -193,6 +209,12 @@ footer a {
   padding: 50px;
   text-align: center; }
 
+.signup {
+  background-color: #ffd4ad; }
+
+.login {
+  background-color: #8cabb9; }
+
 .requete {
   text-align: center;
   margin: 35px auto  !important; }
@@ -208,6 +230,9 @@ footer a {
     margin-bottom: 30px; }
   .reqList img {
     width: 100%; }
+
+.hh {
+  background-color: #579686; }
 
 .requete2 {
   text-align: center;

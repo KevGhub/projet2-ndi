@@ -22,6 +22,9 @@ h3 {
 a {
   color: #00b7ff; }
 
+.navbar a:hover {
+  box-shadow: inset 0 0 0 25px #ffc10799; }
+
 label {
   display: block;
   margin: 20px 5px; }
@@ -38,6 +41,15 @@ ul {
 
 .navbar a, footer a {
   font-size: 1.2rem; }
+
+.nav-link:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1); }
+
+.nav-link.current-link {
+  color: white;
+  font-size: 1.5rem; }
 
 .logError-message {
   display: block;
@@ -113,6 +125,12 @@ ul {
 .inc-cat-bg {
   background-color: #ffd4ad; }
 
+.inc-cat-bg.protection {
+  background-color: red; }
+
+.inc-cat-bg.tranquilite {
+  background-color: blue; }
+
 .card-img-top-inc-cat {
   width: 60%; }
 
@@ -122,8 +140,29 @@ ul {
 .card-text-inc-cat {
   color: #ffd4ad; }
 
-.cat-url-bg {
+.cat-url-bg.protection {
   background-color: #daf1f5; }
+
+.cat-url-bg.dignite {
+  background-color: red; }
+
+.cat-url-bg.tranquilite {
+  background-color: blue; }
+
+.cat-url-bg.environnement {
+  background-color: green; }
+
+.card-body-url-cat.protection {
+  background-color: pink; }
+
+.card-body-url-cat.dignite {
+  background-color: violet; }
+
+.card-body-url-cat.tranquilite {
+  background-color: yellow; }
+
+.card-body-url-cat.environnement {
+  background-color: orange; }
 
 .index-req-section {
   background-color: #8cabb9;
@@ -148,5 +187,32 @@ ul {
 
 .card-text-req-cat {
   color: #ffd4ad; }
+
+.signup, .login {
+  padding: 50px;
+  text-align: center; }
+
+.requete {
+  text-align: center;
+  margin: 35px auto  !important; }
+
+.myLabel {
+  padding: 0 10px;
+  margin: 0 !important; }
+
+.reqList {
+  text-align: center;
+  padding: 50px; }
+  .reqList h3 {
+    margin-bottom: 30px; }
+  .reqList img {
+    width: 100%; }
+
+.requete2 {
+  text-align: center;
+  margin: 35px auto  !important; }
+  .requete2 .desc {
+    width: 95%;
+    overflow: hidden; }
 
 /*# sourceMappingURL=style.css.map */

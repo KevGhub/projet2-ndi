@@ -22,7 +22,7 @@ router.get("/mon-compte/:id", (req, res, next) => {
         })
         .then(
           // GET USER'S REQUEST **************************************************
-          Request.findOne({ creator: userRequest })
+          Request.find({ creator: userRequest })
             .sort({ createdAt: -1 })
             .then(reqUser => {
               console.log(reqUser);

@@ -1,36 +1,39 @@
-<div class="container-fluid ">
-  <div class="row d-flex flex-wrap justify-content-center"></div>
+<div class="container ">
+  {{!-- <div class="row d-flex flex-wrap justify-content-center"></div> --}}
 
-  <h2 class="mt-4 p-2 text-center col-xl-8 col-lg-8">{{incivilityArray.[0].category}}</h2>
+  <h2 class="mt-4 p-2 text-center">{{incivilityArray.[0].category}}</h2>
 
-  <ul class="row">
+  <ul>
     {{#each incivilityArray}}
-    <li class="col-xl-10 col-lg-10">
+    <li>
       <article class="pt-2 text-center">
-        <h3 class="m-auto p-1 col-xl-6 col-lg-6">{{this.name}}</h3>
+        <h3 class="m-auto p-1">{{this.name}}</h3>
         <p class="text-justify">{{this.description}}</p>
       </article>
 
-      <div class="row">
-        <aside class="law col-xl-6 col-lg-6">
+        <aside class="text-center">
           <h4>Les recours législatifs</h4>
           <p>{{this.law}}</p>
         </aside>
-      </div>
     
-      <h3 class="m-auto p-1 col-xl-6 col-lg-6">Les ressources solidaires</h3>
+      <h3 class="p-1 text-center mt-20">Les ressources solidaires</h3>
 
+
+<div class="row">
       {{#each this.associations}}
-      <div class="row">
-        <a class="card-assos-link my-2 mx-0 p-0 col-xl-3 col-lg-3 col-md-6 border-0 d-flex" target="_blank" href="{{this.url}}">
-          <img class="card-img-top-assos p-0 col-xl- col-lg- col-md- col-sm" src="{{this.img}}" alt="logo d'association">
-          <div class="card-body-assos d-flex justify-content-center flex-sm-fill flex-md-fill flex-lg-fill flex-xl-fill">
+      <div class="col-lg-3 col-md-6">
+        <a class="card-assos-link my-2 mx-0 p-0 border-0" target="_blank" href="{{this.url}}">
+          <img class="card-img-top-assos p-0 " src="{{this.img}}" alt="logo d'association">
+          <div class="card-body-assos">
           <h4 class="card-text-assos text-center p-2">{{this.name}}</h4>
           </div>     
         </a>
       </div>
         
       {{/each}} {{!-- end each assos--}}
+
+</div>
+
     </li>{{!-- end li--}}
     {{/each}} {{!-- end each incivilityArray--}}
   </ul>

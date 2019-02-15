@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
     crossorigin="anonymous" />
 
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
   <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
@@ -37,15 +37,16 @@
   </button>
   </div>
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-    <a class="nav-link" href="/">Accueil <span class="sr-only">(current)</span></a>
-    <a class="nav-link" href="/a-propos-de-vous">À propos de vous</a>
-    <a class="nav-link" href="/incivilites-categorie">Douces incivilités</a>
-    <a class="nav-link" href="/requete-categorie">Douces requêtes</a>
+    {{{navLink route "/" "Accueil"}}}
+    {{{navLink route "/a-propos-de-vous" "À propos de vous"}}}
+    {{{navLink route "/incivilites-categorie" "Douces incivilités"}}}
+    {{{navLink route "/requete-categorie" "Douces requêtes"}}}
+    
     {{#if loggedUser}}
-    <a class="nav-link" href="/mon-compte/{{loggedUser._id}}">Mon profile</a>
-    <a class="nav-link" href="/deconnexion">Déconnextion</a>
+      {{!-- {{{#navLink route "/mon-compte/{{loggedUser._id}}" "Mon profil" }}} --}}
+      <a class="nav-link" href="/deconnexion">Déconnextion</a>
     {{else}}
-    <a class="nav-link" href="/identification">Mon compte</a>
+      {{{navLink route "/identification" "Mon compte"}}}
     {{/if}}
   </div>
 </nav>

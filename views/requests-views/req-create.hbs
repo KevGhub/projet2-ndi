@@ -1,3 +1,5 @@
+<div class="requete">
+
 <h2>Créer une requête</h2>
 
 {{> auth_message}} 
@@ -6,17 +8,25 @@
 
 
 <form action="/verif-create-req" method="post" enctype="multipart/form-data">
-  <label>
-    <b>Catégorie de l'incivilité</b> :
-    <label for="Protection">Protection</label>
-    <input type="radio" name="category" value="Protection">
-    <label for="Environnement">Environnement</label>
-    <input type="radio" name="category" value="Environnement">
-    <label for="Tranquilite">Tranquilité</label>
-    <input type="radio" name="category" value="Tranquilite">
-    <label for="Dignite">Dignité</label>
-    <input type="radio" name="category" value="Dignite">
-  </label>
+
+  <b>Catégorie de l'incivilité</b> :
+  <div class="blocLab d-flex justify-content-center align-items-center">
+  <label for="Protection" class="myLabel">Protection</label>
+  <input id="Protection" type="radio" name="category" value="Protection">
+  </div>
+   <div class="blocLab  d-flex justify-content-center align-items-center">
+  <label for="Environnement" class="myLabel">Environnement</label>
+  <input id="Environnement" type="radio" name="category" value="Environnement">
+   </div>
+   <div class="blocLab  d-flex justify-content-center align-items-center">
+     <label for="Tranquilite" class="myLabel">Tranquilité</label>
+  <input id="Tranquilite" type="radio" name="category" value="Tranquilite">
+  
+   </div>
+   <div class="blocLab d-flex justify-content-center align-items-center">
+     <label for="Dignite" class="myLabel">Dignité</label>
+  <input id="Dignite" type="radio" name="category" value="Dignite">
+ </div>
 
   <label>
     <b>Titre de la requête</b> :
@@ -33,7 +43,7 @@
     <input type="text" name="place" placeholder="Soyez précis" required>
   </label>
 
-  <label>
+  <label class="d-flex flex-column align-items-center justify-content-center">
     <b>Description</b> (Décrivez avec le plus de détails possible):
     <textarea type="text" rows="5" cols="33" name="description" placeholder="Soyez convainquant" required></textarea>
   </label>
@@ -45,3 +55,5 @@
 
   <button>Créer votre requête</button>
 </form>
+
+</div>

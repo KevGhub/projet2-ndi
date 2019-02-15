@@ -57,6 +57,21 @@ app.use(
   })
 );
 
+hbs.registerHelper("navLink", function (route, linkUrl, linkText) {
+  let currentClass = "";
+  let currentState = "";
+
+  if (route === linkUrl) {
+    currentClass = "current-link";
+    currentState = "<span class='sr-only'>(current)</span>";
+  }
+
+  return `
+    <a class="nav-link ${currentClass}" href="${linkUrl}">
+      ${linkText} ${currentState}
+    </a>
+  `;
+});
 hbs.registerPartials(path.join(__dirname, "views", "partials"));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
@@ -96,6 +111,8 @@ app.use((req, res, next) => {
   // (req.user is defined by Passport and contains the logged in user's info)
   // req is defined in passport.session() + add the name of data schema name in model
   res.locals.loggedUser = req.user;
+
+  res.locals.route = req.path;
 
   // tell Express we are ready to move to the routes now
   // (need this or your pages will stay laoding forever)
@@ -154,3 +171,4 @@ heroku logs
 
 heroku run node bin/admin-seed.js
 */
+

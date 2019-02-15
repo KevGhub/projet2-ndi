@@ -11,19 +11,22 @@
 
 
 
-
+{{#if reqUser.length}}
   <h4>Mes requêtes</h4>
+  {{#each reqUser}}
      <div class="user-req"> 
-        <h3>{{reqUser.title}}</h3>
+        <h3>{{this.title}}</h3>
         <br>
-        <p>{{reqUser.goal}}</p>
+        <p>{{this.goal}}</p>
         <br>
-        <img src="{{reqUser.img}}" alt="Requête photo">
+        <img src="{{this.img}}" alt="Requête photo">
         <br>
-        <a href="/requete-detail/{{reqUser._id}}">Voir la requête</a>
+        <a href="/requete-detail/{{this._id}}">Voir la requête</a>
         <br>
       <a href="/nouvelle-requete">Créer une requête</a>
     </div>
+    {{/each}}
+  {{/if}}
 
   
 

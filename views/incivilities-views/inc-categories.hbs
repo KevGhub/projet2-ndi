@@ -8,15 +8,15 @@
     <ul class="row">
       {{#each categoryArray}}
       <li class="d-flex flex-wrap justify-content-center row col-xl-4 col-lg-4 ">
-        <a class="card cat-url-bg m-3 p-0 col-xl- col-lg- col-md- col-sm border-0 d-flex align-content-center " href="/incivilites-categorie/{{this.urlName}}">
+        <a class="card cat-url-bg {{this.urlName}} m-3 p-0 col-xl- col-lg- col-md- col-sm border-0 d-flex align-content-center animated zoomIn slow  " href="/incivilites-categorie/{{this.urlName}}">
         <img class="card-img-top-inc-cat rounded mx-auto my-5 d-block" src="{{this.icon}}" alt="image defaut">
-        <div class="card-body-inc-cat d-flex justify-content-center flex-sm-fill flex-md-fill flex-lg-fill flex-xl-fill">
+        <div class="card-body-url-cat {{this.urlName}} d-flex justify-content-center flex-sm-fill flex-md-fill flex-lg-fill flex-xl-fill">
           <h3 class="card-text-inc-cat text-center  p-2">{{this.name}}</h3>
         </div>
         </a>
       </li>
       {{/each}}
-    </ul>{{!-- end row --}}
+     </ul> {{!--end row --}}
 
   </div> {{!-- end row --}}
 </div> {{!-- end container --}}

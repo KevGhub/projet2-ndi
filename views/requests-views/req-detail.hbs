@@ -1,16 +1,14 @@
+<div class="requete2">
+
 <h2>Requête </h2>
 
 <ul>
   <li>
-    <h4>{{reqDoc.category}}</h4>
-    <h3>{{reqDoc.title}}</h3>
-    <br>
-    <p>{{reqDoc.goal}}</p>
-    <br>
-    <p>{{reqDoc.description}}</p>
-    <br>
-    <p>{{reqDoc.place}}</p>
-    <br>
+        <h4>Category</h4>
+    <h3>Title</h3>
+    <p>Main goal</p>
+    <p class="desc"><b>Description:</b>{{reqDoc.description}}</p>
+    <p><b>Place:</b>{{reqDoc.place}}</p>
     <img src="{{reqDoc.img}}" alt="Requête photo">
 
 
@@ -25,7 +23,7 @@
 </ul>
 
 
-<a href="/requete-categorie/{{reqDoc.urlName}}">Retour aux requêtes</a>
+<a href="/requete-categorie/{{reqDoc.urlName}}"><button class="btn btn-primary">Retour aux requêtes</button></a>
 
 
 {{!--
@@ -41,3 +39,4 @@
 <a href="/identification">Mon compte</a>
 {{/if}} --}}
 
+</div>

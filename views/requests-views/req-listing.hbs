@@ -1,15 +1,16 @@
+
+<div class="reqList">
+
 <h3>Requêtes {{requeteResults.0.category}}</h3>
 
+<div class="container">
 
-<ul>
+<ul class="row">
   {{#each requeteResults}}
-  <li>
+  <li class="col-lg-4 col-md-6">
+    <img src="{{this.img}}" alt="Requête photo">reqList
     <h3>{{this.title}}</h3>
-    <br>
     <p>{{this.goal}}</p>
-    <br>
-    <img src="{{this.img}}" alt="Requête photo">
-    <br>
     <a href="/requete-detail/{{this._id}}">Voir la requête</a>
 
 
@@ -17,6 +18,8 @@
   {{/each}}
 </ul>
 
-<hr>
-<br>
-<a href="/nouvelle-requete">Créer une requête</a>
+</div>
+
+<a href="/nouvelle-requete"><button class="btn btn-primary">Créer une requête</button></a>
+
+</div>

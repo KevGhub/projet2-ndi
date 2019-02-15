@@ -3,26 +3,26 @@
     "name": "Protection",
     "urlName": "protection",
 
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif"
+    "icon": "/images/lettreP.png"
   },
 
   {
     "name": "Tranquilité",
     "urlName": "tranquilite",
 
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif"
+    "icon": "/images/lettreT.png"
   },
 
   {
     "name": "Environnement",
     "urlName": "environnement",
 
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif"
+    "icon": "/images/lettreE.png"
   },
   {
     "name": "Dignité",
     "urlName": "dignite",
 
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif"
+    "icon": "/images/lettreD.png"
   }
 ]

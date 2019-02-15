@@ -2,21 +2,21 @@ html {
   height: 100vh; }
 
 body {
-  font-family: 'ABeeZee', 'Saira', Helvetica, Arial, sans-serif;
-  font-size: .95rem;
+  font-family: "ABeeZee", "Saira", Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
   min-height: 100%; }
 
 h1 {
   color: #8984e4; }
 
 h2 {
-  font-family: 'Saira', Helvetica, Arial, sans-serif;
+  font-family: "Saira", Helvetica, Arial, sans-serif;
   font-size: 1.7em;
   margin-top: 15px;
   color: #84e484; }
 
 h3 {
-  font-family: 'Saira', Helvetica, Arial, sans-serif;
+  font-family: "Saira", Helvetica, Arial, sans-serif;
   color: pink; }
 
 a {
@@ -39,7 +39,8 @@ ul {
 .navbar {
   background-color: #ffc10799; }
 
-.navbar a, footer a {
+.navbar a,
+footer a {
   font-size: 1.2rem; }
 
 .nav-link:hover {

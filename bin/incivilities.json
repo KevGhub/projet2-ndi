@@ -2,33 +2,33 @@
   {
     "name": "Animaux",
     "urlName": "animaux",
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif",
+    "icon": "/images/protection-Animaux.png",
 
-    "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
-    "law": "Lorem ipsum dolor sit amet, turpis egestas",
+    "description": "Certains les chérissent d'autres les maltraitent. A travers le temps, notre législation en faveur des animaux a profondément évolué avec la prise de conscience croissante des devoirs de l’homme à leur encontre afin de leur éviter toute souffrance. La maltraitance des animaux est pénalement sanctionnée depuis 1994. Par exemple, est condamné le fait de  priver un chien de nourriture et le frapper à coups de pied, de poing et de sac. La sanction peut être punie de deux ans d’emprisonnement et de 30 000 euros d’amende. Ici, il s'agit de soulever les petites incivilités commises par ou sur nos chers animaux, afin de rendre la vie de tous plus agréable.  ",
+    "law": "Le saviez vous ? Depuis la loi du 16 février 2015 « relative à la modernisation et à la simplification du droit et des procédures », l’animal est enfin considéré dans le Code civil comme un « être vivant doué de sensibilité » (nouvel art. 515-14) et non plus comme un « bien meuble » ",
 
     "associations": [
       {
-        "name": "SPA",
-        "img": "https://media.giphy.com/media/PWFwdYy0da5sA/giphy.gif",
-        "url": "www.spa.fr"
+        "name": "La SPA",
+        "img": "/images/SPA.png",
+        "url": "https://www.la-spa.fr/"
       },
 
       {
-        "name": "SPA",
-        "img": "https://media.giphy.com/media/PWFwdYy0da5sA/giphy.gif",
-        "url": "www.spa.fr"
+        "name": "30 millions d'amis",
+        "img": "/images/30millions.png",
+        "url": "https://www.30millionsdamis.fr/conseils/legislation/les-grandes-lois-de-protection-animale/"
       },
       {
-        "name": "SPA",
-        "img": "https://media.giphy.com/media/PWFwdYy0da5sA/giphy.gif",
-        "url": "www.spa.fr"
+        "name": "Ensemble pour les animaux",
+        "img": "/images/ensembleAnimaux.png",
+        "url": "https://www.ensemblepourlesanimaux.org/presentation-des-grandes-associations/"
       },
 
       {
-        "name": "SPA",
-        "img": "https://media.giphy.com/media/PWFwdYy0da5sA/giphy.gif",
-        "url": "www.spa.fr"
+        "name": "fondation Brigitte Bardot",
+        "img": "/images/brigitteB.png",
+        "url": "http://www.fondationbrigittebardot.fr/"
       }
     ],
 
@@ -40,33 +40,33 @@
     "name": "Équipements publics",
     "urlName": "equipements-publics",
 
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif",
+    "icon": "/images/protection-equipement.png",
 
-    "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
-    "law": "Lorem ipsum dolor sit amet, turpis egestas",
+    "description": "Nous utiisons ensemble les équipements publics. Respectons les infrastructures qui créent notre confort au quotidien. Les tags ou graffitis non autorisés préalablement peuvent être sanctionné. Il s'agit ici de les recenser pour les éviter là où il ne sont pas autorisé, afin de créer davantages d'espaces de graffe, lorsqu'il est nécessaire. ",
+    "law": "Le saviez vous ? Les dégradations matérielles tels que le graffiti,  sans autorisation préalable, sur les façades, les véhicules, les voies publiques ainsi que le mobilier urbain est puni de 3 750 € d’amende et/ou d’une peine de travail d’intérêt général ",
 
     "associations": [
       {
-        "name": "equipePublic",
-        "img": "https://media.giphy.com/media/PWFwdYy0da5sA/giphy.gif",
+        "name": "Street Art Paris",
+        "img": "/public/images/streetArt.png",
         "url": "www.equipePublic.fr"
       },
       {
-        "name": "equipePublic",
-        "img": "https://media.giphy.com/media/PWFwdYy0da5sA/giphy.gif",
+        "name": "Le graffiti à Paris",
+        "img": "/images/paris.png",
+        "url": "https://www.paris.fr/graffiti"
+      },
+
+      {
+        "name": "Street Art Paris",
+        "img": "/images/streetArt.png",
         "url": "www.equipePublic.fr"
       },
 
       {
-        "name": "equipePublic",
-        "img": "https://media.giphy.com/media/PWFwdYy0da5sA/giphy.gif",
-        "url": "www.equipePublic.fr"
-      },
-
-      {
-        "name": "equipePublic",
-        "img": "http://gph.is/1Kjtlft ",
-        "url": "www.equipePublic.fr"
+        "name": "Le graffiti à Paris",
+        "img": "/images/paris.png",
+        "url": "https://www.paris.fr/graffiti"
       }
     ],
 
@@ -77,7 +77,7 @@
   {
     "name": "Véhicules",
     "urlName": "vehicules",
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif",
+    "icon": "/images/protection-Vehicules.png",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
     "law": "Lorem ipsum dolor sit amet, turpis egestas",
@@ -114,7 +114,7 @@
   {
     "name": "Espaces publics",
     "urlName": "espaces publics",
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif",
+    "icon": "/images/protection-espace.png",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
     "law": "Lorem ipsum dolor sit amet, turpis egestas",
@@ -151,7 +151,7 @@
   {
     "name": "Propreté",
     "urlName": "proprete",
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif",
+    "icon": "/images/protection-espace.png",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
     "law": "Lorem ipsum dolor sit amet, turpis egestas",
@@ -187,7 +187,7 @@
   {
     "name": "Dégradations",
     "urlName": "degradation",
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif",
+    "icon": "/images/protection-espace.png",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
     "law": "Lorem ipsum dolor sit amet, turpis egestas",
@@ -224,7 +224,7 @@
   {
     "name": "Détritus",
     "urlName": "detritus",
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif",
+    "icon": "/images/protection-espace.png",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
     "law": "Lorem ipsum dolor sit amet, turpis egestas",
@@ -261,7 +261,7 @@
   {
     "name": "Urbanisation solidaire",
     "urlName": "urbanisation-solidaire",
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif",
+    "icon": "/images/protection-espace.png",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
     "law": "Lorem ipsum dolor sit amet, turpis egestas",
@@ -298,7 +298,7 @@
   {
     "name": "Politesse",
     "urlName": "politesse",
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif",
+    "icon": "/images/tranquilite-politesse.png",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
     "law": "Lorem ipsum dolor sit amet, turpis egestas",
@@ -335,7 +335,7 @@
   {
     "name": "Transports en communs",
     "urlName": "transport-en-communs",
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif",
+    "icon": "/images/tranquilite-transports.png",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
     "law": "Lorem ipsum dolor sit amet, turpis egestas",
@@ -372,7 +372,7 @@
   {
     "name": "Nuisances sonores",
     "urlName": "nuisances-sonores",
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif",
+    "icon": "/images/tranquilite-nuisances.png",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
     "law": "Lorem ipsum dolor sit amet, turpis egestas",
@@ -410,7 +410,7 @@
   {
     "name": "Temps libre",
     "urlName": "temps-libre",
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif",
+    "icon": "/images/tranquilite-temps.png",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
     "law": "Lorem ipsum dolor sit amet, turpis egestas",
@@ -447,7 +447,7 @@
   {
     "name": "Discriminations",
     "urlName": "discriminations",
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif",
+    "icon": "/images/dignite-discriminations.png",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
     "law": "Lorem ipsum dolor sit amet, turpis egestas",
@@ -483,7 +483,7 @@
   {
     "name": "Aide aux personnes en précarite",
     "urlName": "Aide-aux-personnes-en-precarite",
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif",
+    "icon": "/images/dignite-precarite.png",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
     "law": "Lorem ipsum dolor sit amet, turpis egestas",
@@ -492,24 +492,24 @@
       {
         "name": "TouchePasmonMigrant",
         "img": "http//picture.fr ",
-        "url": "www.TouchePasmonMigrant.fr"
+        "url": "http://www.TouchePasmonMigrant.fr"
       },
       {
         "name": "TouchePasmonMigrant",
         "img": "http//picture.fr ",
-        "url": "www.TouchePasmonMigrant.fr"
-      },
-
-      {
-        "name": "TouchePasmonMigrant",
-        "img": "http//picture.fr ",
-        "url": "www.TouchePasmonMigrant.fr"
+        "url": "http://www.TouchePasmonMigrant.fr"
       },
 
       {
         "name": "TouchePasmonMigrant",
         "img": "http//picture.fr ",
-        "url": "www.TouchePasmonMigrant.fr"
+        "url": "http://www.TouchePasmonMigrant.fr"
+      },
+
+      {
+        "name": "TouchePasmonMigrant",
+        "img": "http//picture.fr ",
+        "url": "http://www.TouchePasmonMigrant.fr"
       }
     ],
 
@@ -519,7 +519,7 @@
   {
     "name": "Aide aux mineurs",
     "urlName": "aide-aux-mineurs",
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif",
+    "icon": "/images/dignite-mineurs.png",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
     "law": "Lorem ipsum dolor sit amet, turpis egestas",
@@ -556,7 +556,7 @@
   {
     "name": "Aide aux personnes âgées",
     "urlName": "aide-aux-personne-agees",
-    "icon": "https://media.giphy.com/media/blqEBWV6iFjGM/giphy.gif",
+    "icon": "/images/dignite-vieux.png",
 
     "description": "Lorem ipsum dolor sit amet, turpis egestas laborum vestibulum nec, velit curabitur nullam, nec similique nam eu, elit id turpis neque tellus. Vehicula diam litora curabitur aenean urna, in suspendisse dignissim ultricies diam vehicula, nulla nullam sit porta omnis, ipsum quis quis, nibh magna lectus praesent quam in.",
     "law": "Lorem ipsum dolor sit amet, turpis egestas",

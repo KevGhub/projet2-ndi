@@ -96,7 +96,7 @@ router.get("/requete-detail/:id", (req, res, next) => {
     .catch(err => next(err));
 });
 
-//---------- VOTE
+//---------- VOTE COOUTER
 
 //*********************************************************************
 router.post("/requete-detail/:id/vote", (req, res, next) => {

@@ -4,10 +4,8 @@ const fileUploader = require("../../config/file-upload");
 const Request = require("../../models/request-model");
 const User = require("../../models/user-model");
 
-
 // REQUEST CATEGORIES ROUTER --------------------------------------------------------------
 //####################################################################
-
 
 // ADD A REQUET /nouvelle-requete = req-create.hbs --------------------------------------------------------------
 router.get("/nouvelle-requete", (req, res, next) => {
@@ -21,7 +19,6 @@ router.get("/nouvelle-requete", (req, res, next) => {
   }
 });
 //*********************************************************************
-
 
 // PROCESSING VERIFICATION ****************************************
 router.post("/verif-create-req", fileUploader.single("pictureUpload"), (req, res, next) => {
@@ -60,12 +57,22 @@ router.post("/verif-create-req", fileUploader.single("pictureUpload"), (req, res
           })
           .catch(err => next(err));
       })
-      .catch(err => next(err));
+        .then(requestDoc => {
+          User.findByIdAndUpdate(req.user._id, {
+            $push: { userRequest: requestDoc._id }
+          })
+            .then(() => {
+              req.flash("add-room-success", `Request Created SUCCESS 🍔`);
+              res.redirect("/requete-detail/" + requestDoc._id);
+            })
+            .catch(err => next(err));
+        })
+        .catch(err => next(err));
+    }
   }
-
-});
-  //*********************************************************************
-  // END ADD A ROOM --------------------------------------------------------------
+);
+//*********************************************************************
+// END ADD A ROOM --------------------------------------------------------------
 
 // REQUEST CATEGORIES LISTING to category list ****************************************
 router.get("/requete-categorie/:oneCategory", (req, res, next) => {
@@ -91,11 +98,22 @@ router.get("/requete-detail/:id", (req, res, next) => {
       res.render("requests-views/req-detail");
     })
     .catch(err => next(err));
-  
 });
-  //*********************************************************************
 
+//---------- VOTE
 
-
+//*********************************************************************
+router.post("/requete-detail/:id/vote", (req, res, next) => {
+  Request.findByIdAndUpdate(req.params.id, {
+    $inc: {
+      numberOfVote: 1
+    }
+  })
+    .then(reqDoc => {
+      res.locals.reqDoc = reqDoc;
+      res.redirect(`/requete-detail/${reqDoc._id}`);
+    })
+    .catch(err => next(err));
+});
 
 module.exports = router;

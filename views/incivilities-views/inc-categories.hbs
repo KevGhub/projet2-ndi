@@ -1,12 +1,22 @@
-<h2> Nos Douces Incivilités </h2>
+<div class="inc-cat-bg container-fluid">
+  <div class="row d-flex justify-content-center">
 
-<ul>
-  {{#each categoryArray}}
-  <li>
-    <p>{{this.icon}}</p>
-    <a href="/incivilites-categorie/{{this.urlName}}">
-      <h3>{{this.name}}</h3>
-    </a>
-  </li>
-  {{/each}}
-</ul>
+    <h2 class="mt-4 p-2 text-center col-xl-6 col-lg-6 "> Nos Douces Incivilités </h2>
+
+
+
+    <ul class="row">
+      {{#each categoryArray}}
+      <li class="d-flex flex-wrap justify-content-center row col-xl-4 col-lg-4 ">
+        <a class="card cat-url-bg m-3 p-0 col-xl- col-lg- col-md- col-sm border-0 d-flex align-content-center " href="/incivilites-categorie/{{this.urlName}}">
+        <img class="card-img-top-inc-cat rounded mx-auto my-5 d-block" src="{{this.icon}}" alt="image defaut">
+        <div class="card-body-inc-cat d-flex justify-content-center flex-sm-fill flex-md-fill flex-lg-fill flex-xl-fill">
+          <h3 class="card-text-inc-cat text-center  p-2">{{this.name}}</h3>
+        </div>
+        </a>
+      </li>
+      {{/each}}
+    </ul>{{!-- end row --}}
+
+  </div> {{!-- end row --}}
+</div> {{!-- end container --}}

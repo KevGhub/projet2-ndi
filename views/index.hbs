@@ -1,13 +1,20 @@
-<h2>Nos Douces Incivilités</h2>
+
 
 {{> auth_message}}
 
-{{#if loggedUser}}
-<h3>Bienvenue {{loggedUser.pseudo}} !</h3>
 
-{{else}}
-<p>Pas encore de compte ? Pourquoi ne pas vous inscrire :</p>
+<div class="body row no-gutters ">
+<a class="index-inc-section card pt-4 border-0 col-xl-6 col-lg-6 col-md-6 d-flex justify-content-center" href="/incivilites-categorie">
+  <img class="index-card-img-top mx-auto my-5 d-block" src="/images/inc-letter.png"  alt="lettre i capital">
+  <div class="index-card-body-inc d-flex justify-content-center flex-sm-fill flex-md-fill flex-lg-fill flex-xl-fill">
+    <h2 class="index-card-title-inc text-center p-2 text-uppercase">Douces Incivilités</h2>
+  </div> {{!--  end card-body --}}
+</a> {{!--  end index-inc-section --}}
 
-<a href="/identification">S'inscrire</a>
-
-{{/if}}
+<a class="index-req-section card pt-4 border-0 col-xl-6 col-lg-6 col-md-6 d-flex justify-content-center" href="/requete-categorie">  
+    <img class="index-card-img-top mx-auto my-5 d-block" src="/images/req-letter.png"  alt="lettre r capital">
+    <div class="index-card-body-req d-flex justify-content-center flex-sm-fill flex-md-fill flex-lg-fill flex-xl-fill">
+      <h2 class="index-card-title-req text-center p-2 text-uppercase">Douces Requêtes</h2>
+    </div> {{!--  end card-body --}}
+</a> {{!--  end index-req-section --}}
+</div>

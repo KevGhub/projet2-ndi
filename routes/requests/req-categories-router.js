@@ -21,31 +21,41 @@ router.get("/nouvelle-requete", (req, res, next) => {
 //*********************************************************************
 
 // PROCESSING VERIFICATION ****************************************
-router.post(
-  "/verif-create-req",
-  fileUploader.single("pictureUpload"),
-  (req, res, next) => {
-    // enforce login rules to access create a request ***************************
-    if (!req.user) {
-      req.flash("logError", `You have to be logged in ! 🥣`);
-      res.redirect("/identification");
-    } else {
-      const { title, description, place, goal, category } = req.body;
-      const creator = req.user._id;
-      let img;
-      if (req.file) {
-        img = req.file.secure_url;
-      }
+router.post("/verif-create-req", fileUploader.single("pictureUpload"), (req, res, next) => {
+  // enforce login rules to access create a request ***************************
+  if (!req.user) {
+    req.flash("logError", `You have to be logged in ! 🥣`);
+    res.redirect("/identification");
+  } else {
+    
+    const { title, description, place, goal, category } = req.body;
+    const creator = req.user._id;
+    const urlCat = category.toLowerCase();
+    let img;
+    if (req.file) {
+      img = req.file.secure_url;
+    }
 
-      //create a requet ****************************************
-      Request.create({
-        title,
-        description,
-        place,
-        goal,
-        creator,
-        img,
-        category
+    //create a requet ****************************************
+    Request.create({
+      title,
+      description,
+      place,
+      goal,
+      creator,
+      img,
+      category,
+      urlCat
+    })
+      .then(requestDoc => {
+        User.findByIdAndUpdate(req.user._id, {
+          $push: { userRequest: requestDoc._id }
+        })
+          .then(() => {
+            req.flash("add-room-success", `Request Created SUCCESS 🍔`);
+            res.redirect("/requete-detail/" + requestDoc._id);
+          })
+          .catch(err => next(err));
       })
         .then(requestDoc => {
           User.findByIdAndUpdate(req.user._id, {
@@ -66,25 +76,19 @@ router.post(
 
 // REQUEST CATEGORIES LISTING to category list ****************************************
 router.get("/requete-categorie/:oneCategory", (req, res, next) => {
-  Request.find({ category: { $eq: req.params.oneCategory } })
+  Request.find({ urlCat: { $eq: req.params.oneCategory } })
     .then(requeteResults => {
       console.log(requeteResults);
       res.locals.requeteResults = requeteResults;
       res.render("requests-views/req-listing");
     })
     .catch(err => next(err));
+  
+  
 });
 
-//GET TO REQUEST CATEGORIES LISTING PAGE****************************************
-// router.get("/liste-requetes", (req, res, next) => {
-//   Request.find()
 
-//     .then(reqCategoriesResults => {
-//       res.locals.reqCategoriesResults = reqCategoriesResults;
-//       res.render("requests-views/req-listing");
-//     });
-// });
-//*********************************************************************
+
 
 //GET TO REQUEST DETAIL PAGE****************************************
 router.get("/requete-detail/:id", (req, res, next) => {

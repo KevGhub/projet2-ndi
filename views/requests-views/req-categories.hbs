@@ -1,13 +1,22 @@
-<h2> Nos Douces Requêtes</h2>
 
-<ul>
-  {{#each categoryResults}}
-  <li>
-    <p>{{this.icon}}</p>
-    <a href="/requete-categorie/{{this.urlName}}">
-      <h3>{{this.name}}</h3>
-    </a>
+<div class="req-cat-bg container-fluid">
+  <div class="row d-flex justify-content-center">
 
-  </li>
-  {{/each}}
-</ul>
+    <h2 class="mt-4 p-2 text-center col-xl-6 col-lg-6"> Nos Douces Requêtes </h2>
+
+    <ul class="row">
+      {{#each categoryResults}}
+      <li class="d-flex flex-wrap justify-content-center row col-xl-4 col-lg-4">
+        <a class="card cat-url-bg m-3 p-0 col-xl- col-lg- col-md- col-sm border-0 d-flex align-content-center"
+          href="/requete-categorie/{{this.urlName}}">
+          <img class="card-img-top-req-cat rounded mx-auto my-5 d-block" src="{{this.icon}}" alt="">
+          <div class="card-body-req-cat d-flex justify-content-center flex-sm-fill flex-md-fill flex-lg-fill flex-xl-fill">
+            <h3 class="card-text-req-cat text-center  p-2">{{this.name}}</h3>
+          </div>
+        </a>
+      </li>
+      {{/each}}
+    </ul>{{!-- end row --}}
+
+  </div> {{!-- end row --}}
+</div> {{!-- end container --}}

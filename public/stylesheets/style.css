@@ -3,7 +3,7 @@ html {
 
 body {
   font-family: 'ABeeZee', 'Saira', Helvetica, Arial, sans-serif;
-  font-size: 1.3em;
+  font-size: .95rem;
   min-height: 100%; }
 
 h1 {
@@ -94,17 +94,33 @@ ul {
   padding: 10px 25px;
   color: #ffd4ad; }
 
+.inc-case-bg {
+  background-color: greenyellow;
+  border: black solid 1px; }
+
+.card-img-top-inc-case {
+  width: 40%; }
+
+.card-body-inc-case {
+  background-color: #ffd4ad; }
+
+.card-text-inc-case {
+  color: greenyellow; }
+
+.card-img-top-assos {
+  width: 100%; }
+
 .inc-cat-bg {
   background-color: #ffd4ad; }
 
-.card-img-top {
-  width: 50%; }
+.card-img-top-inc-cat {
+  width: 60%; }
 
-.card-body {
+.card-body-inc-cat {
   background-color: #6ea8c8; }
 
-.card-text {
-  color: #daf1f5; }
+.card-text-inc-cat {
+  color: #ffd4ad; }
 
 .cat-url-bg {
   background-color: #daf1f5; }
@@ -123,5 +139,14 @@ ul {
 
 .req-cat-bg {
   background-color: #8cabb9; }
+
+.card-img-top-req-cat {
+  width: 60%; }
+
+.card-body-req-cat {
+  background-color: #6ea8c8; }
+
+.card-text-req-cat {
+  color: #ffd4ad; }
 
 /*# sourceMappingURL=style.css.map */

@@ -3,9 +3,8 @@ html {
 }
 
 body {
-
-  font-family: 'ABeeZee', 'Saira', Helvetica, Arial, sans-serif;
-  font-size: .95rem;
+  font-family: "ABeeZee", "Saira", Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
   min-height: 100%;
 }
 
@@ -14,14 +13,14 @@ h1 {
 }
 
 h2 {
-  font-family: 'Saira', Helvetica, Arial, sans-serif;
+  font-family: "Saira", Helvetica, Arial, sans-serif;
   font-size: 1.7em;
   margin-top: 15px;
   color: rgb(132, 228, 132);
 }
 
 h3 {
-  font-family: 'Saira', Helvetica, Arial, sans-serif;
+  font-family: "Saira", Helvetica, Arial, sans-serif;
   color: pink;
 }
 
@@ -46,7 +45,8 @@ ul {
 .navbar {
   background-color: #ffc10799;
 }
-.navbar a, footer a {
+.navbar a,
+footer a {
   font-size: 1.2rem;
 }
 
@@ -132,7 +132,7 @@ ul {
   background-color: #ffd4ad;
 }
 .card-text-inc-case {
-color: greenyellow;
+  color: greenyellow;
 }
 
 // CASE INC DETAIL
@@ -141,19 +141,17 @@ color: greenyellow;
   width: 100%;
 }
 
-
 // CATEGORIE INC
 //-----------------------------------------
 .inc-cat-bg {
   background-color: #ffd4ad;
 }
 
-
 .card-img-top-inc-cat {
   width: 60%;
 }
 
-.card-body-inc-cat  {
+.card-body-inc-cat {
   background-color: #6ea8c8;
 }
 
@@ -161,14 +159,12 @@ color: greenyellow;
   color: #ffd4ad;
 }
 
-
 //#######################################################
 // INC & REQ CATEGORIES
 //#######################################################
 .cat-url-bg {
   background-color: #daf1f5;
 }
-
 
 //#######################################################
 // REQUESTS
@@ -195,15 +191,28 @@ color: greenyellow;
   background-color: #8cabb9;
 }
 
-
 .card-img-top-req-cat {
   width: 60%;
 }
 
-.card-body-req-cat  {
+.card-body-req-cat {
   background-color: #6ea8c8;
 }
 
 .card-text-req-cat {
   color: #ffd4ad;
 }
+
+// NAV + FOOTER : FDFCF3
+
+// NAV font color : EF8D6A
+// Footer font color : 366E6E
+
+// PROTECTION back : DCF2F6
+// PROTECTION back title : 6EA9C9
+// tranquilité : back : F4EEDF
+// tranquilité  back title : D3C99B
+// dignité back : F7D0C2
+// dignité back title : E27269
+// environnement back :D4F5DB
+// environnement back title : 90CC92

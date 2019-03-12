@@ -1,13 +1,13 @@
-<div class=" row no-gutters d-flex hh justify-content-center">
+  <h2 class="inc-case-cat mt-4 p-2 text-center col-12">{{incivilityArray.[0].category}}</h2>
 
-  <h2 class="inc-case-cat mt-4 p-2 text-center col-xl-6 col-lg-6">{{incivilityArray.[0].category}}</h2>
+<div class=" container d-flex hh justify-content-center">
 
-  <ul class="row no-gutters mb-0 p-0">
+  <ul class="row mb-0 p-0">
     {{#each incivilityArray}}
-    <li class="pt-4 inc-case-bg col-xl-6 col-lg-6 justify-content-center">
+    <li class="inc-case-bg col-lg-6 justify-content-center">
       <a class="card bg-transparent p-0 col-xl- col-lg- col-md- col-sm border-0 d-flex align-content-center shake slow"
         href="/incivilites/{{this.urlName}}">
-        <img class="card-img-top-inc-case rounded mx-auto my-5 d-block" src="{{this.icon}}" alt="image defaut">
+       <div className="whitediv w-100" style="background-color: #fdfcf3"> <img class="card-img-top-inc-case rounded mx-auto my-5 d-block" src="{{this.icon}}" alt="image defaut"></div> 
         <div
           class="card-body-inc-case d-flex justify-content-center flex-sm-fill flex-md-fill flex-lg-fill flex-xl-fill">
           <h3 class="card-text-inc-case text-center  p-2">{{this.name}}</h3>

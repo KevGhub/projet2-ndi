@@ -5,11 +5,13 @@
 
 
 
-    <ul class="row">
+    <ul class="row m-auto p-0">
       {{#each categoryArray}}
-      <li class="d-flex flex-wrap justify-content-center row col-xl-4 col-lg-4 ">
-        <a class="card cat-url-bg {{this.urlName}} m-3 p-0 col-xl- col-lg- col-md- col-sm border-0 d-flex align-content-center animated zoomIn slow  " href="/incivilites-categorie/{{this.urlName}}">
-        <img class="card-img-top-inc-cat rounded mx-auto my-5 d-block" src="{{this.icon}}" alt="image defaut">
+      <li class="d-flex flex-wrap justify-content-center col-xl-3 col-lg-3 col-md-6 col-sm-12 ">
+        <a class="card cat-url-bg {{this.urlName}} m-3 p-0 border-0 d-flex align-content-center animated zoomIn slow  " href="/incivilites-categorie/{{this.urlName}}">
+        <div className="whitediv w-100">
+          <img class="card-img-top-inc-cat rounded mx-auto my-5 d-block" src="{{this.icon}}" alt="image defaut">
+        </div>
         <div class="card-body-url-cat {{this.urlName}} d-flex justify-content-center flex-sm-fill flex-md-fill flex-lg-fill flex-xl-fill">
           <h3 class="card-text-inc-cat text-center  p-2">{{this.name}}</h3>
         </div>

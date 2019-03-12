@@ -16,7 +16,7 @@ h2 {
   font-family: "Saira", Helvetica, Arial, sans-serif;
   font-size: 1.7em;
   margin-top: 15px;
-  color: #366E6E;
+  color: #366e6e;
 }
 
 h3 {
@@ -30,7 +30,7 @@ h4 {
 }
 
 a {
-  color: #00b7ff;
+  color: #ef8d6a;
 }
 .navbar a:hover {
   box-shadow: inset 0 0 0 25px #ffc10799;
@@ -51,32 +51,33 @@ ul {
 }
 
 .navbar {
-  background-color: #FDFCF3;
+  background-color: #fffffd;
 }
+.footer {
+  background-color: #fffffd;
+}
+
 .navbar a,
 footer a {
-  font-size: 1.2rem;
-
-  
+  font-size: 1.1rem;
 }
 
 .navbar a {
-  color: #EF8D6A;
+  color: #ef8d6a;
 }
 .footer a {
-color: #366E6E
+  color: #ef8d6a;
 }
 
 .nav-link:hover {
--webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .nav-link.current-link {
-  color: #71b1e3;
+  color: #fdfcf3;
   font-size: 1.5rem;
-  
 }
 
 .logError-message {
@@ -150,18 +151,17 @@ color: #366E6E
 // CASE INC LISTING
 //-----------------------------------------
 .inc-case-bg {
-  background-color: #DCF2F6;
-  border: black solid 1px;
+  background-color: white ;
 }
 
 .card-img-top-inc-case {
-  width: 40%;
+  width: 15%;
 }
 .card-body-inc-case {
-  background-color: #ffd4ad;
+  background-color: #6ea9c9;
 }
 .card-text-inc-case {
-  color: #6EA9C9;
+  color: white;
 }
 
 // CASE INC DETAIL
@@ -177,19 +177,19 @@ color: #366E6E
 }
 
 .inc-cat-bg.protection {
-  background-color: #DCF2F6;
+  background-color: #dcf2f6;
 }
 
 .inc-cat-bg.tranquilite {
-  background-color: #F4EEDF;
+  background-color: #f4eedf;
 }
 
 .inc-cat-bg.environnement {
-  background-color: #D4F5DB;
+  background-color: #d4f5db;
 }
 
 .inc-cat-bg.dignite {
-  background-color: #F7D0C2;
+  background-color: #f7d0c2;
 }
 
 .card-img-top-inc-cat {
@@ -208,37 +208,36 @@ color: #366E6E
 // INC & REQ CATEGORIES
 //#######################################################
 .cat-url-bg.protection {
-  background-color: #DCF2F6;
+  background-color: #dcf2f6;
 }
 
 .cat-url-bg.dignite {
-  background-color: #F7D0C2;
+  background-color: #f7d0c2;
 }
 
 .cat-url-bg.tranquilite {
-  background-color: #F4EEDF;
+  background-color: #f4eedf;
 }
 
 .cat-url-bg.environnement {
-  background-color: #D4F5DB;
+  background-color: #d4f5db;
 }
 
 .card-body-url-cat.protection {
-  background-color: #6EA9C9;
+  background-color: #6ea9c9;
 }
 
 .card-body-url-cat.dignite {
-  background-color: #E27269;
+  background-color: #e27269;
 }
 
 .card-body-url-cat.tranquilite {
-  background-color: #D3C99B;
+  background-color: #d3c99b;
 }
 
 .card-body-url-cat.environnement {
-  background-color: #90CC92;
+  background-color: #90cc92;
 }
-
 
 //#######################################################
 // REQUESTS
@@ -277,9 +276,10 @@ color: #366E6E
   color: #ffd4ad;
 }
 
-.signup, .login{
-  padding:50px;
-  text-align:center;
+.signup,
+.login {
+  padding: 50px;
+  text-align: center;
 }
 
 .signup {
@@ -290,39 +290,38 @@ color: #366E6E
   background-color: #8cabb9;
 }
 
-.requete{
-      text-align: center;
-      margin: 35px auto  !important;
+.requete {
+  text-align: center;
+  margin: 35px auto !important;
 }
 
-.myLabel{
-      padding: 0 10px;
-      margin: 0 !important;
+.myLabel {
+  padding: 0 10px;
+  margin: 0 !important;
 }
 
-.reqList{
-  text-align:center;
-  padding:50px;
-  h3{
+.reqList {
+  text-align: center;
+  padding: 50px;
+  h3 {
     margin-bottom: 30px;
   }
-  img{
-        width: 100%;
+  img {
+    width: 100%;
   }
 }
 
 .hh {
-  background-color: #579686;
+  background-color: #fdfcf3; 
 }
 
-
-.requete2{
-      text-align: center;
-      margin: 35px auto  !important;
-      .desc{
-        width: 95%;
+.requete2 {
+  text-align: center;
+  margin: 35px auto !important;
+  .desc {
+    width: 95%;
     overflow: hidden;
-      }
+  }
 }
 
 // NAV + FOOTER : FDFCF3
